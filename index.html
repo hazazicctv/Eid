@@ -148,10 +148,17 @@
       if (name.length > 14) fontSize = 44;
       if (name.length > 22) fontSize = 36;
 
-      ctx.fillStyle = "black";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.font = "bold " + fontSize + "px Tahoma";
+     ctx.fillStyle = "black";
+ctx.textAlign = "center";
+ctx.textBaseline = "middle";
+
+// ظل خفيف للنص
+ctx.shadowColor = "rgba(0,0,0,0.25)";
+ctx.shadowBlur = 6;
+ctx.shadowOffsetY = 2;
+
+// خط أجمل
+ctx.font = "bold " + fontSize + "px 'Segoe UI', Tahoma, Arial";
 
       const x = canvas.width / 2;
       const y = canvas.height * 0.75; // نازل أكثر
