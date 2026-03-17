@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بطاقة عيد مبارك | Eid Greeting Card</title>
+
+  <style>
+    body {
+      text-align: center;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+      font-size: 28px;
+    }
+
+    p {
+      margin-top: 0;
+      color: #444;
+      font-size: 16px;
+    }
+
+    input {
+      padding: 12px;
+      font-size: 18px;
+      width: 300px;
+      max-width: 90%;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      text-align: center;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+
+    .buttons {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 18px;
+      font-size: 16px;
+      margin: 5px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #111;
+      color: white;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    canvas {
+      margin-top: 10px;
+      max-width: 100%;
+      height: auto;
+      background: white;
+      border-radius: 8px;
+    }
+
+    .note {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>🎉 بطاقة عيد مبارك | Eid Greeting Card</h2>
+    <p>اكتب اسمك هنا | Enter your name here</p>
+
+    <input id="name" type="text" placeholder="اكتب اسمك هنا | Enter your name here">
+
+    <div class="buttons">
+      <button onclick="makeCard()">إنشاء البطاقة | Generate Card</button>
+      <button onclick="downloadCard()">تحميل البطاقة | Download Card</button>
+    </div>
+
+    <canvas id="c"></canvas>
+
+    <div class="note">
+      الاسم يدعم العربية والإنجليزية | Arabic and English names are supported
+    </div>
+  </div>
+
+  <script>
+    const img = new Image();
+    img.src = "EidHazazi.png";
+
+    const canvas = document.getElementById("c");
+    const ctx = canvas.getContext("2d");
+
+    let imageReady = false;
+
+    img.onload = () => {
+      canvas.width = img.width;
+      canvas.height = img.height;
+      ctx.drawImage(img, 0, 0);
+      imageReady = true;
+    };
+
+    function drawBaseImage() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(img, 0, 0);
+    }
+
+    function makeCard() {
+      const name = document.getElementById("name").value.trim();
+
+      if (!imageReady) {
+        alert("الصورة لم تجهز بعد، جرّب مرة ثانية بعد لحظة.\nImage is still loading. Please try again.");
+        return;
+      }
+
+      if (!name) {
+        alert("اكتب اسمك أولاً.\nPlease enter your name first.");
+        return;
+      }
+
+      drawBaseImage();
+
+      ctx.fillStyle = "black";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      let fontSize = 52;
+      if (name.length > 14) fontSize = 42;
+      if (name.length > 22) fontSize = 34;
+
+      ctx.font = 700 ${fontSize}px "Segoe UI", Tahoma, Arial, sans-serif;
+
+      const x = canvas.width / 2;
+
+      // نزلت الاسم أكثر من قبل
+      const y = canvas.height * 0.745;
+
+      ctx.fillText(name, x, y);
+    }
+
+    function downloadCard() {
+      if (!imageReady) {
+        alert("الصورة لم تجهز بعد.\nImage is still loading.");
+        return;
+      }
+
+      const link = document.createElement("a");
+      link.download = "eid-card.png";
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+    }
+  </script>
+</body>
+</html>
