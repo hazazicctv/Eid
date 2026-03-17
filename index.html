@@ -5,26 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>هزازي الأمنية | بطاقة عيد الفطر 1447</title>
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2
-    ?family=Cairo:wght@700;800
-    &family=Tajawal:wght@700;800
-    &family=Almarai:wght@700;800
-    &family=Changa:wght@700;800
-    &family=El+Messiri:wght@700;800
-    &family=Amiri:wght@700
-    &family=Aref+Ruqaa:wght@700
-    &family=Reem+Kufi:wght@700;800
-    &family=Noto+Naskh+Arabic:wght@700
-    &family=Noto+Kufi+Arabic:wght@700
-    &family=Scheherazade+New:wght@700
-    &family=Montserrat:wght@700;800
-    &family=Poppins:wght@700;800
-    &family=Nunito:wght@700;800
-    &family=Playfair+Display:wght@700
-    &family=Oswald:wght@700
-    &display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Tajawal:wght@700;800&family=Almarai:wght@700;800&family=Changa:wght@700;800&family=El+Messiri:wght@700;800&family=Amiri:wght@700&family=Aref+Ruqaa:wght@700&family=Reem+Kufi:wght@700;800&family=Noto+Naskh+Arabic:wght@700&family=Noto+Kufi+Arabic:wght@700&family=Scheherazade+New:wght@700&family=Montserrat:wght@700;800&family=Poppins:wght@700;800&family=Nunito:wght@700;800&family=Playfair+Display:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
 
   <style>
     *{ box-sizing:border-box; }
@@ -121,37 +105,6 @@
     }
     .choice-card input{ width:auto; margin-left:8px; accent-color:#b40000; transform:scale(1.1); }
 
-    /* لوحة تحريك (أزرار) */
-    .move-panel{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:10px; }
-    .move-card{
-      width:360px; max-width:100%;
-      background:#fff; border:1px solid #e8e8e8; border-radius:16px;
-      padding:14px; text-align:center;
-    }
-    .mode-tabs{ display:flex; gap:10px; justify-content:center; margin-bottom:12px; flex-wrap:wrap; }
-    .tab-btn{
-      padding:10px 14px; border-radius:12px;
-      border:1px solid #ddd; background:#fff;
-      cursor:pointer; font-weight:800; font-size:14px;
-    }
-    .tab-btn.active{ border-color:#b40000; box-shadow:0 0 0 3px rgba(180,0,0,0.08); }
-
-    .dpad{
-      display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;
-      justify-items:center; align-items:center; margin:12px auto; width:220px;
-    }
-    .mini-btn{
-      padding:10px 0; width:70px; border-radius:12px; border:none;
-      cursor:pointer; font-weight:900; background:#111; color:#fff; transition:0.15s;
-    }
-    .mini-btn:hover{ opacity:0.92; transform:translateY(-1px); }
-    .mini-btn.gray{ background:#444; }
-    .mini-btn.red{ background:#b40000; }
-
-    .size-row{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px; }
-    .hint{ font-size:13px; color:#666; font-weight:700; margin-top:8px; line-height:1.7; }
-
-    /* خيارات النص */
     .grid2{ display:grid; grid-template-columns:repeat(2, minmax(240px, 1fr)); gap:14px; margin-top:12px; }
     .toggle{
       display:flex; justify-content:center; align-items:center; gap:10px;
@@ -159,6 +112,11 @@
       font-weight:800; color:#222;
     }
     .toggle input{ width:auto; transform:scale(1.1); accent-color:#b40000; }
+
+    .hint{
+      font-size:13px; color:#666; font-weight:700;
+      line-height:1.8; margin-top:6px;
+    }
 
     .buttons{ margin-top:8px; }
     button.action{
@@ -181,8 +139,7 @@
     canvas{
       display:block; max-width:100%; margin:0 auto;
       background:#fff; border-radius:10px;
-      touch-action:none; /* مهم للسحب بالجوال */
-      user-select:none;
+      touch-action:none; user-select:none;
     }
 
     .promo-box h3{ margin:0 0 10px; font-size:22px; color:#111; }
@@ -248,19 +205,19 @@
         <div class="template-grid">
           <div class="template-card active" data-template="EidHazazi1.png" onclick="selectTemplate('EidHazazi1.png', this)">
             <img src="EidHazazi1.png" alt="Design 1">
-            <div class="template-title">التصميم 1 | Design 1</div>
+            <div class="template-title">Design 1</div>
           </div>
           <div class="template-card" data-template="EidHazazi2.png" onclick="selectTemplate('EidHazazi2.png', this)">
             <img src="EidHazazi2.png" alt="Design 2">
-            <div class="template-title">التصميم 2 | Design 2</div>
+            <div class="template-title">Design 2</div>
           </div>
           <div class="template-card" data-template="EidHazazi3.png" onclick="selectTemplate('EidHazazi3.png', this)">
             <img src="EidHazazi3.png" alt="Design 3">
-            <div class="template-title">التصميم 3 | Design 3</div>
+            <div class="template-title">Design 3</div>
           </div>
           <div class="template-card" data-template="EidHazazi4.png" onclick="selectTemplate('EidHazazi4.png', this)">
             <img src="EidHazazi4.png" alt="Design 4">
-            <div class="template-title">التصميم 4 | Design 4</div>
+            <div class="template-title">Design 4</div>
           </div>
         </div>
       </div>
@@ -276,17 +233,17 @@
         <div class="field-group">
           <label class="field-label" for="fontSelect">اختر الخط | Choose Font</label>
           <select id="fontSelect">
-            <option value="'Cairo', Tahoma, Arial, sans-serif">Cairo (عصري)</option>
-            <option value="'Tajawal', Tahoma, Arial, sans-serif">Tajawal (نظيف)</option>
-            <option value="'Almarai', Tahoma, Arial, sans-serif">Almarai (واضح)</option>
-            <option value="'Changa', Tahoma, Arial, sans-serif">Changa (جريء)</option>
-            <option value="'El Messiri', Tahoma, Arial, sans-serif">El Messiri (أنيق)</option>
-            <option value="'Aref Ruqaa', Tahoma, Arial, sans-serif">Aref Ruqaa (رقعة)</option>
-            <option value="'Amiri', Tahoma, Arial, serif">Amiri (كلاسيكي)</option>
-            <option value="'Reem Kufi', Tahoma, Arial, sans-serif">Reem Kufi (كوفي)</option>
-            <option value="'Noto Naskh Arabic', Tahoma, Arial, serif">Noto Naskh Arabic (نسخ)</option>
-            <option value="'Noto Kufi Arabic', Tahoma, Arial, sans-serif">Noto Kufi Arabic (كوفي)</option>
-            <option value="'Scheherazade New', Tahoma, Arial, serif">Scheherazade New (تراثي)</option>
+            <option value="'Cairo', Tahoma, Arial, sans-serif">Cairo</option>
+            <option value="'Tajawal', Tahoma, Arial, sans-serif">Tajawal</option>
+            <option value="'Almarai', Tahoma, Arial, sans-serif">Almarai</option>
+            <option value="'Changa', Tahoma, Arial, sans-serif">Changa</option>
+            <option value="'El Messiri', Tahoma, Arial, sans-serif">El Messiri</option>
+            <option value="'Aref Ruqaa', Tahoma, Arial, sans-serif">Aref Ruqaa</option>
+            <option value="'Amiri', Tahoma, Arial, serif">Amiri</option>
+            <option value="'Reem Kufi', Tahoma, Arial, sans-serif">Reem Kufi</option>
+            <option value="'Noto Naskh Arabic', Tahoma, Arial, serif">Noto Naskh Arabic</option>
+            <option value="'Noto Kufi Arabic', Tahoma, Arial, sans-serif">Noto Kufi Arabic</option>
+            <option value="'Scheherazade New', Tahoma, Arial, serif">Scheherazade New</option>
             <option value="'Montserrat', Arial, sans-serif">Montserrat</option>
             <option value="'Poppins', Arial, sans-serif">Poppins</option>
             <option value="'Nunito', Arial, sans-serif">Nunito</option>
@@ -298,20 +255,19 @@
         <div class="field-group">
           <label class="field-label" for="colorSelect">اختر لون النص | Choose Text Color</label>
           <select id="colorSelect">
-            <option value="black">أسود | Black</option>
-            <option value="white">أبيض | White</option>
-            <option value="red">أحمر | Red</option>
-            <option value="#B8860B">ذهبي | Gold</option>
-            <option value="#0F9D58">أخضر | Green</option>
-            <option value="#1A73E8">أزرق | Blue</option>
-            <option value="#0B1F3B">كحلي | Navy</option>
-            <option value="#6A1B9A">بنفسجي | Purple</option>
-            <option value="#666666">رمادي | Gray</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="red">Red</option>
+            <option value="#B8860B">Gold</option>
+            <option value="#0F9D58">Green</option>
+            <option value="#1A73E8">Blue</option>
+            <option value="#0B1F3B">Navy</option>
+            <option value="#6A1B9A">Purple</option>
+            <option value="#666666">Gray</option>
           </select>
         </div>
       </div>
 
-      <!-- خيارات النص الجديدة -->
       <div class="box">
         <div class="field-label">خيارات النص | Text Effects</div>
 
@@ -319,41 +275,41 @@
           <div>
             <label class="field-label" for="shadowColor">لون الظل | Shadow Color</label>
             <select id="shadowColor">
-              <option value="rgba(0,0,0,0.18)">أسود خفيف | Soft Black</option>
-              <option value="rgba(0,0,0,0.35)">أسود قوي | Strong Black</option>
-              <option value="rgba(180,0,0,0.28)">أحمر | Red</option>
-              <option value="rgba(255,255,255,0.35)">أبيض | White</option>
-              <option value="rgba(184,134,11,0.35)">ذهبي | Gold</option>
+              <option value="rgba(0,0,0,0.18)">Soft Black</option>
+              <option value="rgba(0,0,0,0.35)">Strong Black</option>
+              <option value="rgba(180,0,0,0.28)">Red</option>
+              <option value="rgba(255,255,255,0.35)">White</option>
+              <option value="rgba(184,134,11,0.35)">Gold</option>
             </select>
           </div>
 
           <div>
             <label class="field-label" for="shadowBlur">قوة/ضبابية الظل | Shadow Blur</label>
             <select id="shadowBlur">
-              <option value="0">بدون | None</option>
-              <option value="2">خفيف | Light</option>
-              <option value="4" selected>متوسط | Medium</option>
-              <option value="7">قوي | Strong</option>
+              <option value="0">None</option>
+              <option value="2">Light</option>
+              <option value="4" selected>Medium</option>
+              <option value="7">Strong</option>
             </select>
           </div>
 
           <div class="toggle">
             <input type="checkbox" id="enableStroke" />
-            تفعيل حد خارجي | Enable Stroke
+            Enable Stroke
           </div>
 
           <div>
-            <label class="field-label" for="strokeColor">لون الحد | Stroke Color</label>
+            <label class="field-label" for="strokeColor">Stroke Color</label>
             <select id="strokeColor">
-              <option value="rgba(0,0,0,0.45)">أسود | Black</option>
-              <option value="rgba(255,255,255,0.75)">أبيض | White</option>
-              <option value="rgba(180,0,0,0.55)">أحمر | Red</option>
-              <option value="rgba(184,134,11,0.65)">ذهبي | Gold</option>
+              <option value="rgba(0,0,0,0.45)">Black</option>
+              <option value="rgba(255,255,255,0.75)">White</option>
+              <option value="rgba(180,0,0,0.55)">Red</option>
+              <option value="rgba(184,134,11,0.65)">Gold</option>
             </select>
           </div>
 
           <div>
-            <label class="field-label" for="strokeWidth">سماكة الحد | Stroke Width</label>
+            <label class="field-label" for="strokeWidth">Stroke Width</label>
             <select id="strokeWidth">
               <option value="1">1</option>
               <option value="2" selected>2</option>
@@ -364,29 +320,33 @@
 
           <div class="toggle">
             <input type="checkbox" id="autoStroke" checked />
-            حد تلقائي للنص الفاتح | Auto Stroke for Light Text
+            Auto Stroke for Light Text
           </div>
+        </div>
+
+        <div class="hint">
+          ✅ تحريك: اسحب الاسم أو الشعار بإصبع واحد.<br>
+          ✅ تكبير/تصغير: استخدم إصبعين (Pinch) فوق الاسم أو الشعار.
         </div>
       </div>
 
-      <!-- خيارات الشعار -->
       <div class="box">
         <div class="field-label">خيارات الشعار | Logo Options</div>
 
         <div class="choice-grid">
           <label class="choice-card">
             <input type="radio" name="logoMode" value="none" checked>
-            بدون شعار | No Logo
+            No Logo
           </label>
 
           <label class="choice-card">
             <input type="radio" name="logoMode" value="hazazi">
-            شعار هزازي | Hazazi Logo
+            Hazazi Logo
           </label>
 
           <label class="choice-card">
             <input type="radio" name="logoMode" value="upload">
-            شعار/صورة مرفوعة | Uploaded Logo/Image
+            Uploaded Logo/Image
           </label>
         </div>
 
@@ -397,52 +357,14 @@
         </div>
       </div>
 
-      <!-- تحريك احترافي: سحب + أزرار -->
-      <div class="box">
-        <div class="field-label">تحريك احترافي | Pro Move (Drag + Buttons)</div>
-        <div class="hint">
-          ✅ اسحب الاسم أو الشعار مباشرة فوق البطاقة (باللمس/الماوس).<br>
-          ✅ أو استخدم الأزرار للتعديل الدقيق.
-        </div>
-
-        <div class="move-panel">
-          <div class="move-card">
-            <div class="mode-tabs">
-              <button class="tab-btn active" id="tabName" type="button" onclick="setMoveTarget('name')">الاسم | Name</button>
-              <button class="tab-btn" id="tabLogo" type="button" onclick="setMoveTarget('logo')">الشعار | Logo</button>
-            </div>
-
-            <div class="dpad">
-              <div></div>
-              <button class="mini-btn gray" type="button" onclick="moveSelected(0,-1)">▲</button>
-              <div></div>
-
-              <button class="mini-btn gray" type="button" onclick="moveSelected(-1,0)">◀</button>
-              <button class="mini-btn" type="button" onclick="centerSelected()">◎</button>
-              <button class="mini-btn gray" type="button" onclick="moveSelected(1,0)">▶</button>
-
-              <div></div>
-              <button class="mini-btn gray" type="button" onclick="moveSelected(0,1)">▼</button>
-              <div></div>
-            </div>
-
-            <div class="size-row">
-              <button class="mini-btn red" type="button" onclick="sizeSelected(-1)">−</button>
-              <button class="mini-btn red" type="button" onclick="sizeSelected(1)">+</button>
-              <button class="mini-btn" type="button" onclick="resetSelected()">Reset</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="buttons">
-        <button type="button" class="action btn-primary" onclick="generateCard()">إنشاء البطاقة | Generate Card</button>
-        <button type="button" class="action btn-accent" onclick="downloadCard()">تحميل البطاقة | Download Card</button>
-        <button type="button" class="action btn-primary" onclick="resetAll()">إعادة تعيين | Reset All</button>
+        <button type="button" class="action btn-primary" onclick="generateCard()">Generate</button>
+        <button type="button" class="action btn-accent" onclick="downloadCard()">Download</button>
+        <button type="button" class="action btn-primary" onclick="resetAll()">Reset</button>
       </div>
     </div>
 
-    <div class="status-box" id="status">جاري تحميل البطاقة... | Loading card...</div>
+    <div class="status-box" id="status">Loading card...</div>
 
     <div class="canvas-box">
       <canvas id="cardCanvas"></canvas>
@@ -460,14 +382,16 @@
 
       <div class="promo-links">
         <a class="red" href="https://linktr.ee/hazazi_security" target="_blank" rel="noopener noreferrer">
-          للوصول إلى مواقعنا | Visit Our Links
+          Visit Our Links
         </a>
         <a href="https://wa.me/966536190063" target="_blank" rel="noopener noreferrer">
-          التواصل عبر الواتساب | Contact on WhatsApp
+          WhatsApp Contact
         </a>
       </div>
     </div>
-    <script>
+
+  </div>
+  <script>
     const canvas = document.getElementById("cardCanvas");
     const ctx = canvas.getContext("2d");
 
@@ -486,10 +410,6 @@
     const strokeWidthEl = document.getElementById("strokeWidth");
     const autoStrokeEl  = document.getElementById("autoStroke");
 
-    // Move buttons tabs
-    const tabName = document.getElementById("tabName");
-    const tabLogo = document.getElementById("tabLogo");
-
     let currentTemplate = "EidHazazi1.png";
     let currentImage = new Image();
 
@@ -498,17 +418,10 @@
     let companyLogoReady = false;
     companyLogo.onload = () => companyLogoReady = true;
     companyLogo.src = "HazaziLogo.png";
-
     let customLogo = null;
 
     let ready = false;
     let generated = false;
-
-    // Easy control
-    let moveTarget = "name"; // name | logo
-    const MOVE_STEP_PX = 10;
-    const NAME_SIZE_STEP = 2;
-    const LOGO_SIZE_STEP_PCT = 1;
 
     // positions & sizes
     let namePos = { x: 0, y: 0 };
@@ -523,14 +436,27 @@
       logoWidthPct: 22
     };
 
-    // Drag state
+    // Drag/pinch state
     let dragging = false;
     let dragTarget = null; // "name" | "logo"
     let dragOffset = { x: 0, y: 0 };
 
+    let pinching = false;
+    let pinchTarget = null; // "name" | "logo"
+    let pinchStartDist = 0;
+    let pinchStartNameSize = 0;
+    let pinchStartLogoPct = 0;
+
     function getSelectedLogoMode() {
       const selected = document.querySelector('input[name="logoMode"]:checked');
       return selected ? selected.value : "none";
+    }
+
+    function getActiveLogoImage() {
+      const mode = getSelectedLogoMode();
+      if (mode === "hazazi" && companyLogoReady) return companyLogo;
+      if (mode === "upload" && customLogo) return customLogo;
+      return null;
     }
 
     customLogoInput.addEventListener("change", (event) => {
@@ -554,10 +480,10 @@
     function loadTemplate(src) {
       ready = false;
       generated = false;
-      statusEl.textContent = "جاري تحميل البطاقة... | Loading card...";
+      statusEl.textContent = "Loading card...";
 
       const img = new Image();
-      img.onload = () => {
+      img.onload = async () => {
         currentImage = img;
         canvas.width = img.naturalWidth;
         canvas.height = img.naturalHeight;
@@ -571,13 +497,14 @@
         logoWidthPct = DEFAULTS.logoWidthPct;
 
         ready = true;
-        statusEl.textContent = "البطاقة جاهزة | Card is ready";
+        statusEl.textContent = "Card is ready";
+        await ensureSelectedFontLoaded();
         render();
       };
       img.onerror = () => {
         ready = false;
-        statusEl.textContent = "تعذر تحميل التصميم المختار | Failed to load selected template";
-        alert("تعذر تحميل التصميم المختار. تأكد من اسم الصورة ووجودها في نفس مكان index.html");
+        statusEl.textContent = "Failed to load template";
+        alert("تعذر تحميل التصميم المختار. تأكد من اسم الصورة ووجودها بجانب index.html");
       };
       img.src = src;
     }
@@ -589,72 +516,26 @@
     }
     window.selectTemplate = selectTemplate;
 
-    function setMoveTarget(target) {
-      moveTarget = target;
-      tabName.classList.toggle("active", target === "name");
-      tabLogo.classList.toggle("active", target === "logo");
+    // ---- Font loading fix ----
+    function getFirstFontFamily(fontValue) {
+      // fontValue like: "'Cairo', Tahoma, Arial, sans-serif"
+      const first = fontValue.split(",")[0].trim();
+      return first.replace(/^['"]|['"]$/g, ""); // remove quotes
     }
-    window.setMoveTarget = setMoveTarget;
 
-    function centerSelected() {
-      if (!ready) return;
-      if (moveTarget === "name") {
-        namePos.x = canvas.width / 2;
-        namePos.y = canvas.height * DEFAULTS.nameY;
-      } else {
-        // center logo horizontally
-        const w = canvas.width * (logoWidthPct / 100);
-        logoPos.x = (canvas.width - w) / 2;
-        logoPos.y = canvas.height * DEFAULTS.logoY;
-      }
-      render(); generated = true;
+    async function ensureSelectedFontLoaded() {
+      if (!document.fonts || !document.fonts.load) return;
+      const fontValue = fontSelect.value;
+      const fam = getFirstFontFamily(fontValue);
+      try {
+        // Force load weight 800 with current size
+        await document.fonts.load(`800 ${Math.max(24, nameFontSize)}px "${fam}"`);
+      } catch (e) {}
     }
-    window.centerSelected = centerSelected;
 
-    function resetSelected() {
-      if (!ready) return;
-      if (moveTarget === "name") {
-        namePos.x = canvas.width * DEFAULTS.nameX;
-        namePos.y = canvas.height * DEFAULTS.nameY;
-        nameFontSize = DEFAULTS.nameFontSize;
-      } else {
-        logoPos.x = canvas.width * DEFAULTS.logoX;
-        logoPos.y = canvas.height * DEFAULTS.logoY;
-        logoWidthPct = DEFAULTS.logoWidthPct;
-      }
-      render(); generated = true;
-    }
-    window.resetSelected = resetSelected;
-
-    function moveSelected(dx, dy) {
-      if (!ready) return;
-      if (moveTarget === "name") {
-        namePos.x += dx * MOVE_STEP_PX;
-        namePos.y += dy * MOVE_STEP_PX;
-      } else {
-        logoPos.x += dx * MOVE_STEP_PX;
-        logoPos.y += dy * MOVE_STEP_PX;
-      }
-      render(); generated = true;
-    }
-    window.moveSelected = moveSelected;
-
-    function sizeSelected(dir) {
-      if (!ready) return;
-      if (moveTarget === "name") {
-        nameFontSize = Math.max(18, Math.min(160, nameFontSize + dir * NAME_SIZE_STEP));
-      } else {
-        logoWidthPct = Math.max(5, Math.min(70, logoWidthPct + dir * LOGO_SIZE_STEP_PCT));
-      }
-      render(); generated = true;
-    }
-    window.sizeSelected = sizeSelected;
-
-    function getActiveLogoImage() {
-      const mode = getSelectedLogoMode();
-      if (mode === "hazazi" && companyLogoReady) return companyLogo;
-      if (mode === "upload" && customLogo) return customLogo;
-      return null;
+    function isLightColor(colorValue) {
+      const light = new Set(["white", "#B8860B"]);
+      return light.has(colorValue);
     }
 
     function drawLogo(imgObject) {
@@ -663,12 +544,6 @@
       const ratio = imgObject.naturalWidth / imgObject.naturalHeight;
       const targetH = targetW / ratio;
       ctx.drawImage(imgObject, logoPos.x, logoPos.y, targetW, targetH);
-    }
-
-    function isLightColor(colorValue) {
-      // simple set (can be expanded)
-      const light = new Set(["white", "#B8860B"]);
-      return light.has(colorValue);
     }
 
     async function render() {
@@ -684,10 +559,7 @@
       const name = nameInput.value.trim();
       if (!name) return;
 
-      // wait fonts
-      if (document.fonts && document.fonts.ready) {
-        try { await document.fonts.ready; } catch(e) {}
-      }
+      await ensureSelectedFontLoaded();
 
       const selectedFont = fontSelect.value;
       const selectedColor = colorSelect.value;
@@ -702,9 +574,8 @@
       ctx.shadowOffsetX = 0;
       ctx.shadowOffsetY = blur > 0 ? 2 : 0;
 
-      ctx.font = "800 " + nameFontSize + "px " + selectedFont;
+      ctx.font = `800 ${nameFontSize}px ${selectedFont}`;
 
-      // stroke rules
       const forceStroke = enableStrokeEl.checked;
       const autoStroke = autoStrokeEl.checked && isLightColor(selectedColor);
 
@@ -717,7 +588,7 @@
       ctx.fillStyle = selectedColor;
       ctx.fillText(name, namePos.x, namePos.y);
 
-      // reset shadow so it won't affect other drawings later
+      // reset shadow
       ctx.shadowColor = "transparent";
       ctx.shadowBlur = 0;
       ctx.shadowOffsetX = 0;
@@ -725,30 +596,17 @@
     }
 
     async function generateCard() {
-      if (!ready) {
-        alert("التصميم لم يجهز بعد | Template is still loading");
-        return;
-      }
-      const name = nameInput.value.trim();
-      if (!name) {
-        alert("اكتب اسمك أولاً | Please enter your name first");
-        return;
-      }
+      if (!ready) { alert("Template is still loading"); return; }
+      if (!nameInput.value.trim()) { alert("Please enter your name first"); return; }
       await render();
       generated = true;
-      statusEl.textContent = "تم إنشاء البطاقة بنجاح | Card generated successfully";
+      statusEl.textContent = "Card generated";
     }
     window.generateCard = generateCard;
 
     function downloadCard() {
-      if (!ready) {
-        alert("التصميم لم يجهز بعد | Template is still loading");
-        return;
-      }
-      if (!generated) {
-        alert("أنشئ البطاقة أولاً | Please generate the card first");
-        return;
-      }
+      if (!ready) { alert("Template is still loading"); return; }
+      if (!generated) { alert("Generate the card first"); return; }
       const link = document.createElement("a");
       link.download = "eid-card.png";
       link.href = canvas.toDataURL("image/png");
@@ -757,35 +615,33 @@
     window.downloadCard = downloadCard;
 
     function canvasToBlob() {
-      return new Promise((resolve) => {
-        canvas.toBlob((blob) => resolve(blob), "image/png");
-      });
+      return new Promise((resolve) => canvas.toBlob((blob) => resolve(blob), "image/png"));
     }
 
     async function shareCardOnWhatsApp() {
-      if (!ready) { alert("التصميم لم يجهز بعد | Template is still loading"); return; }
-      if (!generated) { alert("أنشئ البطاقة أولاً ثم شاركها | Please generate the card first, then share it"); return; }
+      if (!ready) { alert("Template is still loading"); return; }
+      if (!generated) { alert("Generate the card first"); return; }
 
       const blob = await canvasToBlob();
-      if (!blob) { alert("تعذر تجهيز البطاقة للمشاركة | Failed to prepare the card for sharing"); return; }
+      if (!blob) { alert("Failed to prepare the image"); return; }
 
       const file = new File([blob], "eid-card.png", { type: "image/png" });
 
       try {
         if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
           await navigator.share({
-            title: "بطاقة عيد مبارك",
-            text: "بطاقتي للمعايدة من هزازي الأمنية 🎉",
+            title: "Eid Card",
+            text: "Eid greeting card 🎉",
             files: [file]
           });
         } else {
           downloadCard();
-          alert("جهازك لا يدعم مشاركة الصورة مباشرة. تم تنزيل البطاقة، ويمكنك إرسالها عبر واتساب يدويًا.");
+          alert("Your device doesn't support direct share. The card was downloaded.");
         }
       } catch (err) {
         if (err && err.name !== "AbortError") {
           downloadCard();
-          alert("تعذر فتح المشاركة المباشرة. تم تنزيل البطاقة بدلًا من ذلك.");
+          alert("Sharing failed. The card was downloaded instead.");
         }
       }
     }
@@ -808,17 +664,13 @@
 
       document.querySelector('input[name="logoMode"][value="none"]').checked = true;
 
+      namePos.x = canvas.width * DEFAULTS.nameX;
+      namePos.y = canvas.height * DEFAULTS.nameY;
+      logoPos.x = canvas.width * DEFAULTS.logoX;
+      logoPos.y = canvas.height * DEFAULTS.logoY;
+
       nameFontSize = DEFAULTS.nameFontSize;
       logoWidthPct = DEFAULTS.logoWidthPct;
-
-      if (ready) {
-        namePos.x = canvas.width * DEFAULTS.nameX;
-        namePos.y = canvas.height * DEFAULTS.nameY;
-        logoPos.x = canvas.width * DEFAULTS.logoX;
-        logoPos.y = canvas.height * DEFAULTS.logoY;
-      }
-
-      setMoveTarget("name");
 
       const firstCard = document.querySelector('.template-card[data-template="EidHazazi1.png"]');
       if (firstCard) setActiveTemplateCard(firstCard);
@@ -826,33 +678,32 @@
       loadTemplate(currentTemplate);
 
       generated = false;
-      statusEl.textContent = "تمت إعادة التعيين | Reset completed";
+      statusEl.textContent = "Reset completed";
     }
     window.resetAll = resetAll;
 
-    // --- Drag & Drop (احترافي) ---
+    // ---- Hit tests (for drag/pinch target selection) ----
     function getPointerPos(evt) {
       const rect = canvas.getBoundingClientRect();
       const clientX = evt.touches ? evt.touches[0].clientX : evt.clientX;
       const clientY = evt.touches ? evt.touches[0].clientY : evt.clientY;
-
       const scaleX = canvas.width / rect.width;
       const scaleY = canvas.height / rect.height;
+      return { x: (clientX - rect.left) * scaleX, y: (clientY - rect.top) * scaleY };
+    }
 
-      return {
-        x: (clientX - rect.left) * scaleX,
-        y: (clientY - rect.top) * scaleY
-      };
+    function distTouches(t1, t2) {
+      const dx = t1.clientX - t2.clientX;
+      const dy = t1.clientY - t2.clientY;
+      return Math.sqrt(dx*dx + dy*dy);
     }
 
     function nameHitBox() {
       const name = nameInput.value.trim();
       if (!name) return null;
-
-      ctx.font = "800 " + nameFontSize + "px " + fontSelect.value;
+      ctx.font = `800 ${nameFontSize}px ${fontSelect.value}`;
       const w = ctx.measureText(name).width;
       const h = nameFontSize * 1.1;
-
       return { x: namePos.x - w/2, y: namePos.y - h/2, w, h };
     }
 
@@ -868,40 +719,128 @@
       return p.x >= b.x && p.x <= b.x + b.w && p.y >= b.y && p.y <= b.y + b.h;
     }
 
-    function pointerDown(evt) {
-      if (!ready) return;
-      const p = getPointerPos(evt);
-
-      const activeLogo = getActiveLogoImage();
-      const lb = activeLogo ? logoHitBox(activeLogo) : null;
+    function pickTargetAtPoint(p) {
+      const logoImg = getActiveLogoImage();
+      const lb = logoImg ? logoHitBox(logoImg) : null;
       const nb = nameHitBox();
 
-      // أعط أولوية للشعار إذا ضغط عليه
-      if (lb && inBox(p, lb)) {
-        dragging = true;
-        dragTarget = "logo";
-        dragOffset.x = p.x - logoPos.x;
-        dragOffset.y = p.y - logoPos.y;
-        setMoveTarget("logo");
-        evt.preventDefault();
-        return;
-      }
-
-      if (nb && inBox(p, nb)) {
-        dragging = true;
-        dragTarget = "name";
-        dragOffset.x = p.x - namePos.x;
-        dragOffset.y = p.y - namePos.y;
-        setMoveTarget("name");
-        evt.preventDefault();
-        return;
-      }
-
-      dragging = false;
-      dragTarget = null;
+      if (lb && inBox(p, lb)) return "logo";
+      if (nb && inBox(p, nb)) return "name";
+      return null;
     }
 
-    function pointerMove(evt) {
+    // ---- Drag + Pinch handlers ----
+    function onTouchStart(evt) {
+      if (!ready) return;
+
+      if (evt.touches.length === 2) {
+        // Pinch start
+        pinching = true;
+        dragging = false;
+        dragTarget = null;
+
+        pinchStartDist = distTouches(evt.touches[0], evt.touches[1]);
+        pinchStartNameSize = nameFontSize;
+        pinchStartLogoPct = logoWidthPct;
+
+        // choose target by midpoint
+        const rect = canvas.getBoundingClientRect();
+        const midX = (evt.touches[0].clientX + evt.touches[1].clientX) / 2;
+        const midY = (evt.touches[0].clientY + evt.touches[1].clientY) / 2;
+        const scaleX = canvas.width / rect.width;
+        const scaleY = canvas.height / rect.height;
+        const p = { x: (midX - rect.left) * scaleX, y: (midY - rect.top) * scaleY };
+
+        pinchTarget = pickTargetAtPoint(p) || "name";
+        evt.preventDefault();
+        return;
+      }
+
+      // Single touch drag
+      const p = getPointerPos(evt);
+      const target = pickTargetAtPoint(p);
+      if (!target) return;
+
+      dragging = true;
+      pinching = false;
+      pinchTarget = null;
+      dragTarget = target;
+
+      if (dragTarget === "name") {
+        dragOffset.x = p.x - namePos.x;
+        dragOffset.y = p.y - namePos.y;
+      } else {
+        dragOffset.x = p.x - logoPos.x;
+        dragOffset.y = p.y - logoPos.y;
+      }
+
+      evt.preventDefault();
+    }
+
+    function onTouchMove(evt) {
+      if (!ready) return;
+
+      if (pinching && evt.touches.length === 2) {
+        const d = distTouches(evt.touches[0], evt.touches[1]);
+        const scale = d / Math.max(1, pinchStartDist);
+
+        if (pinchTarget === "name") {
+          nameFontSize = Math.max(18, Math.min(180, Math.round(pinchStartNameSize * scale)));
+        } else {
+          logoWidthPct = Math.max(5, Math.min(80, pinchStartLogoPct * scale));
+        }
+
+        render();
+        generated = true;
+        evt.preventDefault();
+        return;
+      }
+
+      if (!dragging || !dragTarget) return;
+
+      const p = getPointerPos(evt);
+      if (dragTarget === "name") {
+        namePos.x = p.x - dragOffset.x;
+        namePos.y = p.y - dragOffset.y;
+      } else {
+        logoPos.x = p.x - dragOffset.x;
+        logoPos.y = p.y - dragOffset.y;
+      }
+
+      render();
+      generated = true;
+      evt.preventDefault();
+    }
+
+    function onTouchEnd(evt) {
+      if (evt.touches.length === 0) {
+        dragging = false;
+        dragTarget = null;
+        pinching = false;
+        pinchTarget = null;
+      }
+    }
+
+    // Mouse drag (desktop)
+    function onMouseDown(evt) {
+      if (!ready) return;
+      const p = getPointerPos(evt);
+      const target = pickTargetAtPoint(p);
+      if (!target) return;
+
+      dragging = true;
+      dragTarget = target;
+
+      if (dragTarget === "name") {
+        dragOffset.x = p.x - namePos.x;
+        dragOffset.y = p.y - namePos.y;
+      } else {
+        dragOffset.x = p.x - logoPos.x;
+        dragOffset.y = p.y - logoPos.y;
+      }
+      evt.preventDefault();
+    }
+    function onMouseMove(evt) {
       if (!dragging || !dragTarget) return;
       const p = getPointerPos(evt);
 
@@ -917,23 +856,23 @@
       generated = true;
       evt.preventDefault();
     }
-
-    function pointerUp() {
+    function onMouseUp() {
       dragging = false;
       dragTarget = null;
     }
 
-    canvas.addEventListener("mousedown", pointerDown);
-    window.addEventListener("mousemove", pointerMove);
-    window.addEventListener("mouseup", pointerUp);
+    // attach
+    canvas.addEventListener("touchstart", onTouchStart, { passive:false });
+    canvas.addEventListener("touchmove", onTouchMove, { passive:false });
+    canvas.addEventListener("touchend", onTouchEnd);
 
-    canvas.addEventListener("touchstart", pointerDown, { passive:false });
-    window.addEventListener("touchmove", pointerMove, { passive:false });
-    window.addEventListener("touchend", pointerUp);
+    canvas.addEventListener("mousedown", onMouseDown);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseup", onMouseUp);
 
-    // Live updates
-    nameInput.addEventListener("input", () => { render(); generated = true; });
-    fontSelect.addEventListener("change", () => { render(); generated = true; });
+    // live updates (IMPORTANT: include ensureSelectedFontLoaded)
+    nameInput.addEventListener("input", async () => { await ensureSelectedFontLoaded(); render(); generated = true; });
+    fontSelect.addEventListener("change", async () => { await ensureSelectedFontLoaded(); render(); generated = true; });
     colorSelect.addEventListener("change", () => { render(); generated = true; });
 
     shadowColorEl.addEventListener("change", () => { render(); generated = true; });
@@ -943,12 +882,12 @@
     strokeWidthEl.addEventListener("change", () => { render(); generated = true; });
     autoStrokeEl.addEventListener("change", () => { render(); generated = true; });
 
-    document.querySelectorAll('input[name="logoMode"]').forEach(r => r.addEventListener("change", () => { render(); generated = true; }));
+    document.querySelectorAll('input[name="logoMode"]').forEach(r =>
+      r.addEventListener("change", () => { render(); generated = true; })
+    );
 
     // start
     loadTemplate(currentTemplate);
   </script>
 </body>
 </html>
-
-  </div>
