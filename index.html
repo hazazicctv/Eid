@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>بطاقة عيد مبارك | Eid Greeting Card</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Tajawal:wght@700;800&family=Almarai:wght@700;800&family=Changa:wght@700;800&family=El+Messiri:wght@700&family=Montserrat:wght@700;800&family=Poppins:wght@700;800&family=Nunito:wght@700;800&family=Playfair+Display:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -14,7 +19,7 @@
     }
 
     .wrap {
-      max-width: 900px;
+      max-width: 980px;
       margin: 0 auto;
     }
 
@@ -29,19 +34,32 @@
       font-size: 16px;
     }
 
-    input {
-      width: 320px;
+    .controls {
+      background: #ffffff;
+      padding: 18px;
+      border-radius: 14px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    input, select {
+      width: 260px;
       max-width: 90%;
       padding: 12px;
-      font-size: 18px;
+      font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 10px;
       text-align: center;
-      font-family: Tahoma, Arial, sans-serif;
-    }
-
-    .buttons {
-      margin: 14px 0 18px;
+      font-family: inherit;
+      background: #fff;
     }
 
     button {
@@ -53,7 +71,17 @@
       cursor: pointer;
       background: #111;
       color: #fff;
-      font-family: Tahoma, Arial, sans-serif;
+      font-family: inherit;
+    }
+
+    button:hover {
+      opacity: 0.92;
+    }
+
+    #status {
+      margin-bottom: 12px;
+      color: #666;
+      font-size: 14px;
     }
 
     canvas {
@@ -64,104 +92,165 @@
       border-radius: 8px;
     }
 
-    #status {
-      margin-bottom: 12px;
+    .note {
+      margin-top: 12px;
       color: #666;
-      font-size: 14px;
-    }
-
-    #sourceImage {
-      display: none;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>🎉 بطاقة عيد مبارك | Eid Greeting Card</h1>
-    <p>اكتب اسمك هنا | Enter your name here</p>
+    <p>اكتب اسمك ثم اختر التصميم والخط واللون | Enter your name, then choose the design, font, and color</p>
 
-    <input
-      id="nameInput"
-      type="text"
-      placeholder="اكتب اسمك هنا | Enter your name here"
-    />
+    <div class="controls">
+      <div class="row">
+        <input
+          id="nameInput"
+          type="text"
+          placeholder="اكتب اسمك هنا | Enter your name here"
+        />
+      </div>
 
-    <div class="buttons">
-      <button type="button" onclick="generateCard()">
-        إنشاء البطاقة | Generate Card
-      </button>
-      <button type="button" onclick="downloadCard()">
-        تحميل البطاقة | Download Card
-      </button>
+      <div class="row">
+        <select id="templateSelect" onchange="changeTemplate()">
+          <option value="EidHazazi1.png">التصميم 1 | Design 1</option>
+          <option value="EidHazazi2.png">التصميم 2 | Design 2</option>
+          <option value="EidHazazi3.png">التصميم 3 | Design 3</option>
+        </select>
+
+        <select id="fontSelect">
+          <option value="'Cairo', Tahoma, Arial, sans-serif">Cairo</option>
+          <option value="'Tajawal', Tahoma, Arial, sans-serif">Tajawal</option>
+          <option value="'Almarai', Tahoma, Arial, sans-serif">Almarai</option>
+          <option value="'Changa', Tahoma, Arial, sans-serif">Changa</option>
+          <option value="'El Messiri', Tahoma, Arial, sans-serif">El Messiri</option>
+          <option value="'Montserrat', Arial, sans-serif">Montserrat</option>
+          <option value="'Poppins', Arial, sans-serif">Poppins</option>
+          <option value="'Nunito', Arial, sans-serif">Nunito</option>
+          <option value="'Playfair Display', Georgia, serif">Playfair Display</option>
+          <option value="'Oswald', Arial, sans-serif">Oswald</option>
+        </select>
+
+        <select id="colorSelect">
+          <option value="black">أسود | Black</option>
+          <option value="red">أحمر | Red</option>
+          <option value="white">أبيض | White</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <button type="button" onclick="generateCard()">إنشاء البطاقة | Generate Card</button>
+        <button type="button" onclick="downloadCard()">تحميل البطاقة | Download Card</button>
+      </div>
     </div>
 
     <div id="status">جاري تحميل البطاقة... | Loading card...</div>
 
-    <img id="sourceImage" src="EidHazazi.png" alt="Card image" />
     <canvas id="cardCanvas"></canvas>
+
+    <div class="note">
+      تأكد من رفع الصور الثلاث بنفس أسماء النماذج المحددة | Make sure the three template images are uploaded with the exact names
+    </div>
   </div>
 
   <script>
-    const sourceImage = document.getElementById("sourceImage");
     const canvas = document.getElementById("cardCanvas");
     const ctx = canvas.getContext("2d");
     const statusEl = document.getElementById("status");
     const nameInput = document.getElementById("nameInput");
+    const templateSelect = document.getElementById("templateSelect");
+    const fontSelect = document.getElementById("fontSelect");
+    const colorSelect = document.getElementById("colorSelect");
 
+    let currentImage = new Image();
     let ready = false;
     let generated = false;
 
-    function drawBaseCard() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(sourceImage, 0, 0, canvas.width, canvas.height);
+    function loadTemplate(src) {
+      ready = false;
+      generated = false;
+      statusEl.textContent = "جاري تحميل البطاقة... | Loading card...";
+
+      const img = new Image();
+      img.onload = function () {
+        currentImage = img;
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        drawBaseCard();
+        ready = true;
+        statusEl.textContent = "البطاقة جاهزة | Card is ready";
+      };
+
+      img.onerror = function () {
+        ready = false;
+        statusEl.textContent = "تعذر تحميل التصميم المختار | Failed to load selected template";
+        alert("تعذر تحميل التصميم المختار. تأكد من اسم الصورة ووجودها في نفس مكان index.html");
+      };
+
+      img.src = src;
     }
 
-    sourceImage.onload = function () {
-      canvas.width = sourceImage.naturalWidth;
-      canvas.height = sourceImage.naturalHeight;
-      drawBaseCard();
-      statusEl.textContent = "البطاقة جاهزة | Card is ready";
-      ready = true;
-    };
+    function drawBaseCard() {
+      if (!currentImage || !currentImage.complete) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(currentImage, 0, 0, canvas.width, canvas.height);
+    }
 
-    sourceImage.onerror = function () {
-      statusEl.textContent = "تعذر تحميل الصورة | Failed to load image";
-      alert("الصورة لم تتحمل. تأكد أن اسمها EidHazazi.png");
-    };
+    function changeTemplate() {
+      loadTemplate(templateSelect.value);
+    }
 
-    function generateCard() {
+    async function generateCard() {
       if (!ready) {
-        alert("الصورة لم تجهز بعد | Image is still loading");
+        alert("التصميم لم يجهز بعد | Template is still loading");
         return;
       }
 
       const name = nameInput.value.trim();
-
       if (!name) {
         alert("اكتب اسمك أولاً | Please enter your name first");
         return;
       }
 
+      // انتظار تحميل الخطوط
+      if (document.fonts && document.fonts.ready) {
+        try {
+          await document.fonts.ready;
+        } catch (e) {}
+      }
+
       drawBaseCard();
 
-      let fontSize = 54;
-      if (name.length > 14) fontSize = 44;
-      if (name.length > 22) fontSize = 36;
+      let fontSize = 62;
+      if (name.length > 14) fontSize = 50;
+      if (name.length > 22) fontSize = 40;
 
-     ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
+      const selectedFont = fontSelect.value;
+      const selectedColor = colorSelect.value;
 
-// ظل خفيف للنص
-ctx.shadowColor = "rgba(0,0,0,0.25)";
-ctx.shadowBlur = 3;
-ctx.shadowOffsetY = 1;
+      ctx.fillStyle = selectedColor;
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
 
-// خط أجمل
-ctx.font = "bold " + fontSize + "px 'Segoe UI', Tahoma, Arial";
+      // ظل خفيف
+      ctx.shadowColor = "rgba(0,0,0,0.18)";
+      ctx.shadowBlur = 3;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 2;
+
+      ctx.font = "800 " + fontSize + "px " + selectedFont;
 
       const x = canvas.width / 2;
-      const y = canvas.height * 0.73; // نازل أكثر
+      const y = canvas.height * 0.81;
+
+      // لو اللون أبيض نضيف حد خفيف أسود لزيادة الوضوح
+      if (selectedColor === "white") {
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "rgba(0,0,0,0.35)";
+        ctx.strokeText(name, x, y);
+      }
 
       ctx.fillText(name, x, y);
       generated = true;
@@ -169,7 +258,7 @@ ctx.font = "bold " + fontSize + "px 'Segoe UI', Tahoma, Arial";
 
     function downloadCard() {
       if (!ready) {
-        alert("الصورة لم تجهز بعد | Image is still loading");
+        alert("التصميم لم يجهز بعد | Template is still loading");
         return;
       }
 
@@ -183,6 +272,9 @@ ctx.font = "bold " + fontSize + "px 'Segoe UI', Tahoma, Arial";
       link.href = canvas.toDataURL("image/png");
       link.click();
     }
+
+    // تحميل أول تصميم تلقائيًا
+    loadTemplate(templateSelect.value);
   </script>
 </body>
 </html>
