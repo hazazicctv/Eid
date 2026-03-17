@@ -3,289 +3,260 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>بطاقة عيد مبارك | Eid Greeting Card</title>
+  <title>هزازي الأمنية | بطاقة عيد الفطر 1447</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Tajawal:wght@700;800&family=Almarai:wght@700;800&family=Changa:wght@700;800&family=El+Messiri:wght@700&family=Montserrat:wght@700;800&family=Poppins:wght@700;800&family=Nunito:wght@700;800&family=Playfair+Display:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
+    * { box-sizing: border-box; }
+
+    body{
+      margin:0; padding:24px;
+      background:linear-gradient(180deg,#fff 0%,#f7f7f7 45%,#f1f1f1 100%);
+      font-family:Tahoma, Arial, sans-serif;
+      text-align:center; color:#111;
+    }
+    .wrap{ max-width:1240px; margin:0 auto; }
+
+    .header-box{
+      background:linear-gradient(135deg,#111 0%,#1b1b1b 60%,#b40000 100%);
+      color:#fff; border-radius:22px;
+      padding:28px 22px; margin-bottom:20px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.12);
+      border:1px solid rgba(255,255,255,0.08);
+    }
+    .brand-top{
+      display:flex; align-items:center; justify-content:center;
+      gap:14px; flex-wrap:wrap; margin-bottom:14px;
+    }
+    .brand-top img{ max-height:74px; width:auto; display:block; }
+    .brand-name{ font-size:18px; font-weight:800; line-height:1.6; }
+
+    h1{ margin:0 0 8px; font-size:31px; font-weight:800; line-height:1.6; }
+    .subtitle{ margin:0; color:rgba(255,255,255,0.92); font-size:16px; line-height:1.8; }
+
+    .top-actions{
+      display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
+      margin-top:18px;
+    }
+    .top-link-btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      text-decoration:none; color:#fff;
+      border:1px solid rgba(255,255,255,0.18);
+      padding:12px 18px; border-radius:14px;
+      font-size:14px; font-weight:800;
+      transition:0.2s ease; min-width:280px;
+      cursor:pointer;
+    }
+    .top-link-btn:hover{ transform:translateY(-1px); }
+
+    .whatsapp-btn{
+      background:linear-gradient(135deg,#25D366 0%,#1ebe5d 100%);
+      border-color:rgba(255,255,255,0.08);
+      box-shadow:0 8px 18px rgba(37,211,102,0.22);
+    }
+    .whatsapp-btn:hover{ background:linear-gradient(135deg,#22c55e 0%,#18a851 100%); }
+
+    .wa-icon{ width:22px; height:22px; display:inline-block; flex:0 0 auto; }
+
+    .controls{
+      background:#fff; padding:22px; border-radius:20px;
+      margin-bottom:20px; box-shadow:0 10px 28px rgba(0,0,0,0.06);
+      border-top:4px solid #b40000;
+    }
+    .row{
+      display:flex; gap:14px; justify-content:center;
+      align-items:flex-start; flex-wrap:wrap; margin-bottom:14px;
+    }
+    .field-group{ min-width:230px; }
+    .field-group.wide{ min-width:360px; }
+
+    .field-label{
+      display:block; margin-bottom:8px;
+      font-size:14px; font-weight:800; color:#111;
+      text-align:center; line-height:1.6;
+    }
+    input, select{
+      width:100%; padding:13px 14px; font-size:16px;
+      border:1px solid #d7d7d7; border-radius:12px;
+      text-align:center; font-family:inherit; background:#fff;
+      outline:none; transition:0.2s ease;
+      box-shadow:inset 0 1px 2px rgba(0,0,0,0.03);
+    }
+    input:focus, select:focus{
+      border-color:#b40000;
+      box-shadow:0 0 0 3px rgba(180,0,0,0.08);
     }
 
-    body {
-      margin: 0;
-      padding: 24px;
-      background: linear-gradient(180deg, #f7f7f7 0%, #efefef 100%);
-      font-family: Tahoma, Arial, sans-serif;
-      text-align: center;
-      color: #111;
+    .template-section{ margin-bottom:18px; }
+    .template-grid{
+      display:flex; gap:14px; justify-content:center;
+      flex-wrap:wrap; margin-top:10px;
+    }
+    .template-card{
+      width:170px; background:#fff; border:2px solid transparent;
+      border-radius:16px; padding:8px; cursor:pointer;
+      transition:0.2s ease; box-shadow:0 4px 14px rgba(0,0,0,0.05);
+    }
+    .template-card:hover{ transform:translateY(-2px); box-shadow:0 7px 18px rgba(0,0,0,0.08); }
+    .template-card.active{ border-color:#b40000; box-shadow:0 8px 22px rgba(180,0,0,0.18); }
+    .template-card img{
+      width:100%; height:220px; object-fit:cover;
+      border-radius:12px; display:block;
+    }
+    .template-title{ margin-top:8px; font-size:13px; font-weight:800; color:#222; }
+
+    .extra-options, .adjustment-section, .promo-box{
+      margin-top:8px; margin-bottom:16px;
+      background:#fafafa; border:1px solid #ececec;
+      border-radius:16px; padding:16px;
     }
 
-    .wrap {
-      max-width: 1150px;
-      margin: 0 auto;
+    .choice-grid{
+      display:flex; justify-content:center;
+      gap:12px; flex-wrap:wrap; margin-top:10px;
+    }
+    .choice-card{
+      background:#fff; border:1px solid #e5e5e5; border-radius:12px;
+      padding:12px 14px; min-width:200px;
+      font-size:14px; font-weight:700; color:#222; cursor:pointer;
+    }
+    .choice-card input{
+      width:auto; margin-left:8px; accent-color:#b40000;
+      transform:scale(1.1);
     }
 
-    .header-box {
-      background: #ffffff;
-      border-radius: 18px;
-      padding: 24px 20px;
-      margin-bottom: 18px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+    .slider-grid{
+      display:grid; grid-template-columns:repeat(2, minmax(240px, 1fr));
+      gap:14px; margin-top:12px;
+    }
+    .slider-box{
+      background:#fff; border:1px solid #e8e8e8;
+      border-radius:14px; padding:12px; text-align:center;
+    }
+    .slider-box label{
+      display:block; font-size:13px; font-weight:800;
+      margin-bottom:8px; line-height:1.6;
+    }
+    .slider-box input[type="range"]{ width:100%; padding:0; border:none; box-shadow:none; }
+    .slider-value{ font-size:13px; color:#666; margin-top:6px; font-weight:700; }
+
+    .buttons{ margin-top:8px; }
+    button{
+      padding:13px 20px; font-size:16px; font-weight:800;
+      border:none; border-radius:12px; margin:6px;
+      cursor:pointer; color:#fff; font-family:inherit;
+      transition:0.2s ease; min-width:220px;
+    }
+    .btn-primary{ background:#111; }
+    .btn-primary:hover{ background:#000; transform:translateY(-1px); }
+    .btn-accent{ background:#b40000; }
+    .btn-accent:hover{ background:#960000; transform:translateY(-1px); }
+
+    .status-box{ margin-bottom:14px; color:#666; font-size:14px; font-weight:700; }
+    .canvas-box{
+      background:#fff; padding:18px; border-radius:20px;
+      box-shadow:0 10px 28px rgba(0,0,0,0.06);
+      border-top:4px solid #111;
+    }
+    canvas{
+      display:block; max-width:100%;
+      margin:0 auto; background:#fff; border-radius:10px;
     }
 
-    h1 {
-      margin: 0 0 8px;
-      font-size: 30px;
-      font-weight: 800;
+    .promo-box h3{ margin:0 0 10px; font-size:22px; color:#111; }
+    .promo-box p{ margin:0 0 16px; color:#555; line-height:1.8; font-size:15px; }
+
+    .promo-image{
+      width:100%; max-width:900px; border-radius:16px;
+      display:block; margin:0 auto 16px;
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
     }
-
-    .subtitle {
-      margin: 0;
-      color: #555;
-      font-size: 16px;
-      line-height: 1.7;
+    .promo-links{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+    .promo-links a{
+      display:inline-block; text-decoration:none; background:#111; color:#fff;
+      padding:12px 18px; border-radius:12px; font-weight:800;
+      font-size:14px; transition:0.2s ease;
     }
+    .promo-links a.red{ background:#b40000; }
+    .promo-links a:hover{ transform:translateY(-1px); opacity:0.95; }
 
-    .controls {
-      background: #ffffff;
-      padding: 22px;
-      border-radius: 18px;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.06);
-    }
-
-    .row {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      margin-bottom: 14px;
-    }
-
-    .field-group {
-      min-width: 230px;
-      text-align: right;
-    }
-
-    .field-group.wide {
-      min-width: 340px;
-    }
-
-    .field-label {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-      font-weight: 700;
-      color: #222;
-      text-align: center;
-      line-height: 1.5;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 13px 14px;
-      font-size: 16px;
-      border: 1px solid #d7d7d7;
-      border-radius: 12px;
-      text-align: center;
-      font-family: inherit;
-      background: #fff;
-      outline: none;
-      transition: 0.2s ease;
-      box-shadow: inset 0 1px 2px rgba(0,0,0,0.03);
-    }
-
-    input:focus, select:focus {
-      border-color: #999;
-      box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
-    }
-
-    .template-section {
-      margin-bottom: 18px;
-    }
-
-    .template-grid {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-
-    .template-card {
-      width: 190px;
-      background: #fff;
-      border: 2px solid transparent;
-      border-radius: 16px;
-      padding: 8px;
-      cursor: pointer;
-      transition: 0.2s ease;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.05);
-    }
-
-    .template-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    }
-
-    .template-card.active {
-      border-color: #111;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.10);
-    }
-
-    .template-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 12px;
-      display: block;
-    }
-
-    .template-title {
-      margin-top: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #222;
-      line-height: 1.5;
-    }
-
-    .buttons {
-      margin-top: 8px;
-    }
-
-    button {
-      padding: 13px 20px;
-      font-size: 16px;
-      font-weight: 700;
-      border: none;
-      border-radius: 12px;
-      margin: 6px;
-      cursor: pointer;
-      background: #111;
-      color: #fff;
-      font-family: inherit;
-      transition: 0.2s ease;
-      min-width: 220px;
-    }
-
-    button:hover {
-      opacity: 0.93;
-      transform: translateY(-1px);
-    }
-
-    .status-box {
-      margin-bottom: 14px;
-      color: #666;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    .canvas-box {
-      background: #ffffff;
-      padding: 18px;
-      border-radius: 18px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.06);
-    }
-
-    canvas {
-      display: block;
-      max-width: 100%;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 10px;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        padding: 16px;
-      }
-
-      h1 {
-        font-size: 24px;
-      }
-
-      .subtitle {
-        font-size: 15px;
-      }
-
-      .field-group,
-      .field-group.wide {
-        width: 100%;
-        min-width: unset;
-      }
-
-      .template-card {
-        width: 150px;
-      }
-
-      .template-card img {
-        height: 200px;
-      }
-
-      button {
-        width: 100%;
-        min-width: unset;
-      }
+    @media (max-width:900px){ .slider-grid{ grid-template-columns:1fr; } }
+    @media (max-width:768px){
+      body{ padding:16px; }
+      h1{ font-size:24px; }
+      .subtitle{ font-size:15px; }
+      .field-group, .field-group.wide{ width:100%; min-width:unset; }
+      .template-card{ width:145px; }
+      .template-card img{ height:190px; }
+      button{ width:100%; min-width:unset; }
+      .brand-top img{ max-height:60px; }
+      .top-link-btn, .promo-links a{ width:100%; }
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
-
     <div class="header-box">
-      <h1>🎉 بطاقة عيد مبارك | Eid Greeting Card</h1>
+      <div class="brand-top">
+        <img src="HazaziLogo.png" alt="Hazazi Security Logo">
+        <div class="brand-name">Hazazi Security</div>
+      </div>
+
+      <h1>هزازي الأمنية تهنئكم بعيد الفطر المبارك 1447</h1>
       <p class="subtitle">
-        اكتب اسمك ثم اختر التصميم والخط واللون لتحميل بطاقتك مباشرة
+        أنشئ بطاقتك بسهولة، واختر التصميم والخط واللون والشعار بالشكل الذي يناسبك
         <br>
-        Enter your name, then choose the design, font, and color to download your card instantly
+        Create your greeting card easily and customize the design, font, color, and logo as you like
       </p>
+
+      <div class="top-actions">
+        <a class="top-link-btn whatsapp-btn" href="#" onclick="shareCardOnWhatsApp(); return false;">
+          <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
+            <path fill="white" d="M19.11 17.21c-.27-.14-1.61-.8-1.86-.89-.25-.09-.43-.14-.61.14-.18.27-.7.89-.86 1.07-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.16-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.54.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.02-.22-.52-.44-.45-.61-.46h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.82c.14.18 1.92 2.93 4.66 4.11.65.28 1.16.44 1.56.56.66.21 1.25.18 1.72.11.53-.08 1.61-.66 1.84-1.29.23-.63.23-1.16.16-1.29-.07-.13-.25-.2-.52-.34z"/>
+            <path fill="white" d="M16.03 3.2C8.95 3.2 3.2 8.95 3.2 16.03c0 2.27.6 4.5 1.74 6.46L3 29l6.71-1.9a12.8 12.8 0 0 0 6.32 1.62h.01c7.08 0 12.83-5.75 12.83-12.83S23.11 3.2 16.03 3.2zm0 23.35h-.01a10.7 10.7 0 0 1-5.44-1.49l-.39-.23-3.98 1.13 1.06-3.88-.25-.4a10.72 10.72 0 1 1 9.01 4.87z"/>
+          </svg>
+          مشاركة البطاقة عبر الواتساب | Share Card on WhatsApp
+        </a>
+      </div>
     </div>
 
     <div class="controls">
-
       <div class="template-section">
         <div class="field-label">اختر التصميم | Choose Design</div>
-
         <div class="template-grid">
           <div class="template-card active" data-template="EidHazazi1.png" onclick="selectTemplate('EidHazazi1.png', this)">
             <img src="EidHazazi1.png" alt="Design 1">
             <div class="template-title">التصميم 1 | Design 1</div>
           </div>
-
           <div class="template-card" data-template="EidHazazi2.png" onclick="selectTemplate('EidHazazi2.png', this)">
             <img src="EidHazazi2.png" alt="Design 2">
             <div class="template-title">التصميم 2 | Design 2</div>
           </div>
-
           <div class="template-card" data-template="EidHazazi3.png" onclick="selectTemplate('EidHazazi3.png', this)">
             <img src="EidHazazi3.png" alt="Design 3">
             <div class="template-title">التصميم 3 | Design 3</div>
+          </div>
+          <div class="template-card" data-template="EidHazazi4.png" onclick="selectTemplate('EidHazazi4.png', this)">
+            <img src="EidHazazi4.png" alt="Design 4">
+            <div class="template-title">التصميم 4 | Design 4</div>
           </div>
         </div>
       </div>
 
       <div class="row">
         <div class="field-group wide">
-          <label class="field-label" for="nameInput">
-            اكتب الاسم | Enter Name
-          </label>
-          <input
-            id="nameInput"
-            type="text"
-            placeholder="اكتب اسمك هنا | Enter your name here"
-          />
+          <label class="field-label" for="nameInput">اكتب الاسم | Enter Name</label>
+          <input id="nameInput" type="text" placeholder="اكتب اسمك هنا | Enter your name here" />
         </div>
       </div>
 
       <div class="row">
         <div class="field-group">
-          <label class="field-label" for="fontSelect">
-            اختر الخط | Choose Font
-          </label>
+          <label class="field-label" for="fontSelect">اختر الخط | Choose Font</label>
           <select id="fontSelect">
             <option value="'Cairo', Tahoma, Arial, sans-serif">Cairo</option>
             <option value="'Tajawal', Tahoma, Arial, sans-serif">Tajawal</option>
@@ -301,9 +272,7 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="colorSelect">
-            اختر اللون | Choose Color
-          </label>
+          <label class="field-label" for="colorSelect">اختر اللون | Choose Color</label>
           <select id="colorSelect">
             <option value="black">أسود | Black</option>
             <option value="red">أحمر | Red</option>
@@ -312,26 +281,108 @@
         </div>
       </div>
 
+      <div class="extra-options">
+        <div class="field-label">خيارات الشعار | Logo Options</div>
+
+        <div class="choice-grid">
+          <label class="choice-card">
+            <input type="radio" name="logoMode" value="none" checked>
+            بدون شعار | No Logo
+          </label>
+
+          <label class="choice-card">
+            <input type="radio" name="logoMode" value="hazazi">
+            شعار هزازي | Hazazi Logo
+          </label>
+
+          <label class="choice-card">
+            <input type="radio" name="logoMode" value="upload">
+            شعار أو صورة مرفوعة | Uploaded Logo/Image
+          </label>
+        </div>
+
+        <div class="row" style="margin-top:10px;">
+          <div class="field-group wide">
+            <input type="file" id="customLogoInput" accept="image/*">
+          </div>
+        </div>
+      </div>
+
+      <div class="adjustment-section">
+        <div class="field-label">التحكم في الاسم والشعار | Adjust Name and Logo</div>
+
+        <div class="slider-grid">
+          <div class="slider-box">
+            <label for="nameX">مكان الاسم أفقيًا | Name Horizontal Position</label>
+            <input type="range" id="nameX" min="10" max="90" value="50" oninput="updateSliderValues()">
+            <div class="slider-value" id="nameXValue">50%</div>
+          </div>
+
+          <div class="slider-box">
+            <label for="nameY">مكان الاسم عموديًا | Name Vertical Position</label>
+            <input type="range" id="nameY" min="10" max="95" value="74" oninput="updateSliderValues()">
+            <div class="slider-value" id="nameYValue">74%</div>
+          </div>
+
+          <div class="slider-box">
+            <label for="fontSizeControl">حجم الخط | Font Size</label>
+            <input type="range" id="fontSizeControl" min="24" max="100" value="62" oninput="updateSliderValues()">
+            <div class="slider-value" id="fontSizeValue">62px</div>
+          </div>
+
+          <div class="slider-box">
+            <label for="logoX">مكان الشعار أفقيًا | Logo Horizontal Position</label>
+            <input type="range" id="logoX" min="0" max="90" value="39" oninput="updateSliderValues()">
+            <div class="slider-value" id="logoXValue">39%</div>
+          </div>
+
+          <div class="slider-box">
+            <label for="logoY">مكان الشعار عموديًا | Logo Vertical Position</label>
+            <input type="range" id="logoY" min="0" max="90" value="4" oninput="updateSliderValues()">
+            <div class="slider-value" id="logoYValue">4%</div>
+          </div>
+
+          <div class="slider-box">
+            <label for="logoWidth">حجم الشعار | Logo Size</label>
+            <input type="range" id="logoWidth" min="8" max="40" value="22" oninput="updateSliderValues()">
+            <div class="slider-value" id="logoWidthValue">22%</div>
+          </div>
+        </div>
+      </div>
+
       <div class="buttons">
-        <button type="button" onclick="generateCard()">
-          إنشاء البطاقة | Generate Card
-        </button>
-        <button type="button" onclick="downloadCard()">
-          تحميل البطاقة | Download Card
-        </button>
+        <button type="button" class="btn-primary" onclick="generateCard()">إنشاء البطاقة | Generate Card</button>
+        <button type="button" class="btn-accent" onclick="downloadCard()">تحميل البطاقة | Download Card</button>
+        <button type="button" class="btn-primary" onclick="resetOptions()">إعادة تعيين | Reset</button>
       </div>
     </div>
 
-    <div class="status-box" id="status">
-      جاري تحميل البطاقة... | Loading card...
-    </div>
+    <div class="status-box" id="status">جاري تحميل البطاقة... | Loading card...</div>
 
     <div class="canvas-box">
       <canvas id="cardCanvas"></canvas>
     </div>
 
-  </div>
+    <div class="promo-box">
+      <h3>تعرف علينا أكثر | Know More About Us</h3>
+      <p>
+        نصمم حلولًا أمنية واحترافية بهوية مميزة، ويسعدنا خدمتك في الأعمال الخاصة والشركات.
+        <br>
+        We provide professional security solutions and branded services for individuals and companies.
+      </p>
 
+      <img class="promo-image" src="HazaziBusiness.png" alt="Hazazi Business Services">
+
+      <div class="promo-links">
+        <a class="red" href="https://linktr.ee/hazazi_security" target="_blank" rel="noopener noreferrer">
+          للوصول إلى مواقعنا | Visit Our Links
+        </a>
+        <a href="https://wa.me/966536190063" target="_blank" rel="noopener noreferrer">
+          التواصل عبر الواتساب | Contact on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
   <script>
     const canvas = document.getElementById("cardCanvas");
     const ctx = canvas.getContext("2d");
@@ -340,11 +391,52 @@
     const fontSelect = document.getElementById("fontSelect");
     const colorSelect = document.getElementById("colorSelect");
     const templateCards = document.querySelectorAll(".template-card");
+    const customLogoInput = document.getElementById("customLogoInput");
+
+    const nameX = document.getElementById("nameX");
+    const nameY = document.getElementById("nameY");
+    const fontSizeControl = document.getElementById("fontSizeControl");
+    const logoX = document.getElementById("logoX");
+    const logoY = document.getElementById("logoY");
+    const logoWidth = document.getElementById("logoWidth");
 
     let currentImage = new Image();
     let currentTemplate = "EidHazazi1.png";
+    let companyLogo = new Image();
+    let companyLogoReady = false;
+    let customLogo = null;
     let ready = false;
     let generated = false;
+
+    companyLogo.onload = function () { companyLogoReady = true; };
+    companyLogo.src = "HazaziLogo.png";
+
+    customLogoInput.addEventListener("change", function (event) {
+      const file = event.target.files[0];
+      if (!file) { customLogo = null; return; }
+
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        const img = new Image();
+        img.onload = function () { customLogo = img; };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    function getSelectedLogoMode() {
+      const selected = document.querySelector('input[name="logoMode"]:checked');
+      return selected ? selected.value : "none";
+    }
+
+    function updateSliderValues() {
+      document.getElementById("nameXValue").textContent = nameX.value + "%";
+      document.getElementById("nameYValue").textContent = nameY.value + "%";
+      document.getElementById("fontSizeValue").textContent = fontSizeControl.value + "px";
+      document.getElementById("logoXValue").textContent = logoX.value + "%";
+      document.getElementById("logoYValue").textContent = logoY.value + "%";
+      document.getElementById("logoWidthValue").textContent = logoWidth.value + "%";
+    }
 
     function setActiveTemplateCard(selectedElement) {
       templateCards.forEach(card => card.classList.remove("active"));
@@ -357,7 +449,6 @@
       statusEl.textContent = "جاري تحميل البطاقة... | Loading card...";
 
       const img = new Image();
-
       img.onload = function () {
         currentImage = img;
         canvas.width = img.naturalWidth;
@@ -366,13 +457,11 @@
         ready = true;
         statusEl.textContent = "البطاقة جاهزة | Card is ready";
       };
-
       img.onerror = function () {
         ready = false;
         statusEl.textContent = "تعذر تحميل التصميم المختار | Failed to load selected template";
         alert("تعذر تحميل التصميم المختار. تأكد من اسم الصورة ووجودها في نفس مكان index.html");
       };
-
       img.src = src;
     }
 
@@ -386,6 +475,22 @@
       currentTemplate = templateName;
       setActiveTemplateCard(element);
       loadTemplate(currentTemplate);
+    }
+    window.selectTemplate = selectTemplate;
+    window.updateSliderValues = updateSliderValues;
+
+    function drawLogoOnCard(imgObject) {
+      if (!imgObject) return;
+
+      const widthPercent = parseFloat(logoWidth.value) / 100;
+      const targetWidth = canvas.width * widthPercent;
+      const ratio = imgObject.naturalWidth / imgObject.naturalHeight;
+      const targetHeight = targetWidth / ratio;
+
+      const x = canvas.width * (parseFloat(logoX.value) / 100);
+      const y = canvas.height * (parseFloat(logoY.value) / 100);
+
+      ctx.drawImage(imgObject, x, y, targetWidth, targetHeight);
     }
 
     async function generateCard() {
@@ -401,33 +506,31 @@
       }
 
       if (document.fonts && document.fonts.ready) {
-        try {
-          await document.fonts.ready;
-        } catch (e) {}
+        try { await document.fonts.ready; } catch (e) {}
       }
 
       drawBaseCard();
 
-      let fontSize = 62;
-      if (name.length > 14) fontSize = 50;
-      if (name.length > 22) fontSize = 40;
+      const logoMode = getSelectedLogoMode();
+      if (logoMode === "hazazi" && companyLogoReady) drawLogoOnCard(companyLogo);
+      if (logoMode === "upload" && customLogo) drawLogoOnCard(customLogo);
 
       const selectedFont = fontSelect.value;
       const selectedColor = colorSelect.value;
+      const finalFontSize = parseInt(fontSizeControl.value, 10);
 
       ctx.fillStyle = selectedColor;
       ctx.textAlign = "center";
       ctx.textBaseline = "middle";
-
       ctx.shadowColor = "rgba(0,0,0,0.18)";
       ctx.shadowBlur = 3;
       ctx.shadowOffsetX = 0;
       ctx.shadowOffsetY = 2;
 
-      ctx.font = "800 " + fontSize + "px " + selectedFont;
+      ctx.font = "800 " + finalFontSize + "px " + selectedFont;
 
-      const x = canvas.width / 2;
-      const y = canvas.height * 0.74;
+      const x = canvas.width * (parseFloat(nameX.value) / 100);
+      const y = canvas.height * (parseFloat(nameY.value) / 100);
 
       if (selectedColor === "white") {
         ctx.lineWidth = 2;
@@ -439,13 +542,13 @@
       generated = true;
       statusEl.textContent = "تم إنشاء البطاقة بنجاح | Card generated successfully";
     }
+    window.generateCard = generateCard;
 
     function downloadCard() {
       if (!ready) {
         alert("التصميم لم يجهز بعد | Template is still loading");
         return;
       }
-
       if (!generated) {
         alert("أنشئ البطاقة أولاً | Please generate the card first");
         return;
@@ -456,7 +559,81 @@
       link.href = canvas.toDataURL("image/png");
       link.click();
     }
+    window.downloadCard = downloadCard;
 
+    function canvasToBlob() {
+      return new Promise((resolve) => {
+        canvas.toBlob((blob) => resolve(blob), "image/png");
+      });
+    }
+
+    async function shareCardOnWhatsApp() {
+      if (!ready) {
+        alert("التصميم لم يجهز بعد | Template is still loading");
+        return;
+      }
+      if (!generated) {
+        alert("أنشئ البطاقة أولاً ثم شاركها | Please generate the card first, then share it");
+        return;
+      }
+
+      const blob = await canvasToBlob();
+      if (!blob) {
+        alert("تعذر تجهيز البطاقة للمشاركة | Failed to prepare the card for sharing");
+        return;
+      }
+
+      const file = new File([blob], "eid-card.png", { type: "image/png" });
+
+      try {
+        if (navigator.canShare && navigator.canShare({ files: [file] }) && navigator.share) {
+          await navigator.share({
+            title: "بطاقة عيد مبارك",
+            text: "بطاقتي للمعايدة من هزازي الأمنية 🎉",
+            files: [file]
+          });
+        } else {
+          downloadCard();
+          alert("جهازك لا يدعم مشاركة الصورة مباشرة. تم تنزيل البطاقة، ويمكنك إرسالها عبر واتساب يدويًا.");
+        }
+      } catch (error) {
+        if (error && error.name !== "AbortError") {
+          downloadCard();
+          alert("تعذر فتح المشاركة المباشرة. تم تنزيل البطاقة بدلًا من ذلك.");
+        }
+      }
+    }
+    window.shareCardOnWhatsApp = shareCardOnWhatsApp;
+
+    function resetOptions() {
+      nameInput.value = "";
+      fontSelect.selectedIndex = 0;
+      colorSelect.value = "black";
+      customLogoInput.value = "";
+      customLogo = null;
+
+      document.querySelector('input[name="logoMode"][value="none"]').checked = true;
+
+      nameX.value = 50;
+      nameY.value = 74;
+      fontSizeControl.value = 62;
+      logoX.value = 39;
+      logoY.value = 4;
+      logoWidth.value = 22;
+
+      updateSliderValues();
+
+      const firstCard = document.querySelector('.template-card[data-template="EidHazazi1.png"]');
+      setActiveTemplateCard(firstCard);
+      currentTemplate = "EidHazazi1.png";
+      loadTemplate(currentTemplate);
+
+      statusEl.textContent = "تمت إعادة التعيين | Reset completed";
+      generated = false;
+    }
+    window.resetOptions = resetOptions;
+
+    updateSliderValues();
     loadTemplate(currentTemplate);
   </script>
 </body>
