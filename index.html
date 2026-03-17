@@ -7,11 +7,27 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Tajawal:wght@700;800&family=Almarai:wght@700;800&family=Changa:wght@700;800&family=El+Messiri:wght@700&family=Montserrat:wght@700;800&family=Poppins:wght@700;800&family=Nunito:wght@700;800&family=Playfair+Display:wght@700&family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2
+    ?family=Cairo:wght@700;800
+    &family=Tajawal:wght@700;800
+    &family=Almarai:wght@700;800
+    &family=Changa:wght@700;800
+    &family=El+Messiri:wght@700;800
+    &family=Amiri:wght@700
+    &family=Aref+Ruqaa:wght@700
+    &family=Reem+Kufi:wght@700;800
+    &family=Noto+Naskh+Arabic:wght@700
+    &family=Noto+Kufi+Arabic:wght@700
+    &family=Scheherazade+New:wght@700
+    &family=Montserrat:wght@700;800
+    &family=Poppins:wght@700;800
+    &family=Nunito:wght@700;800
+    &family=Playfair+Display:wght@700
+    &family=Oswald:wght@700
+    &display=swap" rel="stylesheet">
 
   <style>
-    * { box-sizing: border-box; }
-
+    *{ box-sizing:border-box; }
     body{
       margin:0; padding:24px;
       background:linear-gradient(180deg,#fff 0%,#f7f7f7 45%,#f1f1f1 100%);
@@ -27,38 +43,29 @@
       box-shadow:0 12px 30px rgba(0,0,0,0.12);
       border:1px solid rgba(255,255,255,0.08);
     }
-    .brand-top{
-      display:flex; align-items:center; justify-content:center;
-      gap:14px; flex-wrap:wrap; margin-bottom:14px;
-    }
+    .brand-top{ display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:14px; }
     .brand-top img{ max-height:74px; width:auto; display:block; }
     .brand-name{ font-size:18px; font-weight:800; line-height:1.6; }
 
     h1{ margin:0 0 8px; font-size:31px; font-weight:800; line-height:1.6; }
     .subtitle{ margin:0; color:rgba(255,255,255,0.92); font-size:16px; line-height:1.8; }
 
-    .top-actions{
-      display:flex; justify-content:center; gap:10px; flex-wrap:wrap;
-      margin-top:18px;
-    }
+    .top-actions{ display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:18px; }
     .top-link-btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      text-decoration:none; color:#fff;
+      text-decoration:none; color:#fff; cursor:pointer;
       border:1px solid rgba(255,255,255,0.18);
       padding:12px 18px; border-radius:14px;
       font-size:14px; font-weight:800;
       transition:0.2s ease; min-width:280px;
-      cursor:pointer;
     }
     .top-link-btn:hover{ transform:translateY(-1px); }
-
     .whatsapp-btn{
       background:linear-gradient(135deg,#25D366 0%,#1ebe5d 100%);
       border-color:rgba(255,255,255,0.08);
       box-shadow:0 8px 18px rgba(37,211,102,0.22);
     }
     .whatsapp-btn:hover{ background:linear-gradient(135deg,#22c55e 0%,#18a851 100%); }
-
     .wa-icon{ width:22px; height:22px; display:inline-block; flex:0 0 auto; }
 
     .controls{
@@ -66,10 +73,7 @@
       margin-bottom:20px; box-shadow:0 10px 28px rgba(0,0,0,0.06);
       border-top:4px solid #b40000;
     }
-    .row{
-      display:flex; gap:14px; justify-content:center;
-      align-items:flex-start; flex-wrap:wrap; margin-bottom:14px;
-    }
+    .row{ display:flex; gap:14px; justify-content:center; align-items:flex-start; flex-wrap:wrap; margin-bottom:14px; }
     .field-group{ min-width:230px; }
     .field-group.wide{ min-width:360px; }
 
@@ -91,10 +95,7 @@
     }
 
     .template-section{ margin-bottom:18px; }
-    .template-grid{
-      display:flex; gap:14px; justify-content:center;
-      flex-wrap:wrap; margin-top:10px;
-    }
+    .template-grid{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:10px; }
     .template-card{
       width:170px; background:#fff; border:2px solid transparent;
       border-radius:16px; padding:8px; cursor:pointer;
@@ -102,53 +103,68 @@
     }
     .template-card:hover{ transform:translateY(-2px); box-shadow:0 7px 18px rgba(0,0,0,0.08); }
     .template-card.active{ border-color:#b40000; box-shadow:0 8px 22px rgba(180,0,0,0.18); }
-    .template-card img{
-      width:100%; height:220px; object-fit:cover;
-      border-radius:12px; display:block;
-    }
+    .template-card img{ width:100%; height:220px; object-fit:cover; border-radius:12px; display:block; }
     .template-title{ margin-top:8px; font-size:13px; font-weight:800; color:#222; }
 
-    .extra-options, .adjustment-section, .promo-box{
+    .box{
       margin-top:8px; margin-bottom:16px;
       background:#fafafa; border:1px solid #ececec;
       border-radius:16px; padding:16px;
     }
 
-    .choice-grid{
-      display:flex; justify-content:center;
-      gap:12px; flex-wrap:wrap; margin-top:10px;
-    }
+    .choice-grid{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:10px; }
     .choice-card{
       background:#fff; border:1px solid #e5e5e5; border-radius:12px;
-      padding:12px 14px; min-width:200px;
+      padding:12px 14px; min-width:220px;
       font-size:14px; font-weight:700; color:#222; cursor:pointer;
+      text-align:right;
     }
-    .choice-card input{
-      width:auto; margin-left:8px; accent-color:#b40000;
-      transform:scale(1.1);
-    }
+    .choice-card input{ width:auto; margin-left:8px; accent-color:#b40000; transform:scale(1.1); }
 
-    .slider-grid{
-      display:grid; grid-template-columns:repeat(2, minmax(240px, 1fr));
-      gap:14px; margin-top:12px;
+    /* لوحة تحريك (أزرار) */
+    .move-panel{ display:flex; justify-content:center; gap:14px; flex-wrap:wrap; margin-top:10px; }
+    .move-card{
+      width:360px; max-width:100%;
+      background:#fff; border:1px solid #e8e8e8; border-radius:16px;
+      padding:14px; text-align:center;
     }
-    .slider-box{
-      background:#fff; border:1px solid #e8e8e8;
-      border-radius:14px; padding:12px; text-align:center;
+    .mode-tabs{ display:flex; gap:10px; justify-content:center; margin-bottom:12px; flex-wrap:wrap; }
+    .tab-btn{
+      padding:10px 14px; border-radius:12px;
+      border:1px solid #ddd; background:#fff;
+      cursor:pointer; font-weight:800; font-size:14px;
     }
-    .slider-box label{
-      display:block; font-size:13px; font-weight:800;
-      margin-bottom:8px; line-height:1.6;
+    .tab-btn.active{ border-color:#b40000; box-shadow:0 0 0 3px rgba(180,0,0,0.08); }
+
+    .dpad{
+      display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;
+      justify-items:center; align-items:center; margin:12px auto; width:220px;
     }
-    .slider-box input[type="range"]{ width:100%; padding:0; border:none; box-shadow:none; }
-    .slider-value{ font-size:13px; color:#666; margin-top:6px; font-weight:700; }
+    .mini-btn{
+      padding:10px 0; width:70px; border-radius:12px; border:none;
+      cursor:pointer; font-weight:900; background:#111; color:#fff; transition:0.15s;
+    }
+    .mini-btn:hover{ opacity:0.92; transform:translateY(-1px); }
+    .mini-btn.gray{ background:#444; }
+    .mini-btn.red{ background:#b40000; }
+
+    .size-row{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:10px; }
+    .hint{ font-size:13px; color:#666; font-weight:700; margin-top:8px; line-height:1.7; }
+
+    /* خيارات النص */
+    .grid2{ display:grid; grid-template-columns:repeat(2, minmax(240px, 1fr)); gap:14px; margin-top:12px; }
+    .toggle{
+      display:flex; justify-content:center; align-items:center; gap:10px;
+      background:#fff; border:1px solid #e8e8e8; border-radius:14px; padding:12px;
+      font-weight:800; color:#222;
+    }
+    .toggle input{ width:auto; transform:scale(1.1); accent-color:#b40000; }
 
     .buttons{ margin-top:8px; }
-    button{
+    button.action{
       padding:13px 20px; font-size:16px; font-weight:800;
       border:none; border-radius:12px; margin:6px;
-      cursor:pointer; color:#fff; font-family:inherit;
-      transition:0.2s ease; min-width:220px;
+      cursor:pointer; color:#fff; font-family:inherit; transition:0.2s ease; min-width:220px;
     }
     .btn-primary{ background:#111; }
     .btn-primary:hover{ background:#000; transform:translateY(-1px); }
@@ -156,34 +172,34 @@
     .btn-accent:hover{ background:#960000; transform:translateY(-1px); }
 
     .status-box{ margin-bottom:14px; color:#666; font-size:14px; font-weight:700; }
+
     .canvas-box{
       background:#fff; padding:18px; border-radius:20px;
       box-shadow:0 10px 28px rgba(0,0,0,0.06);
       border-top:4px solid #111;
     }
     canvas{
-      display:block; max-width:100%;
-      margin:0 auto; background:#fff; border-radius:10px;
+      display:block; max-width:100%; margin:0 auto;
+      background:#fff; border-radius:10px;
+      touch-action:none; /* مهم للسحب بالجوال */
+      user-select:none;
     }
 
     .promo-box h3{ margin:0 0 10px; font-size:22px; color:#111; }
     .promo-box p{ margin:0 0 16px; color:#555; line-height:1.8; font-size:15px; }
-
     .promo-image{
-      width:100%; max-width:900px; border-radius:16px;
-      display:block; margin:0 auto 16px;
+      width:100%; max-width:900px; border-radius:16px; display:block; margin:0 auto 16px;
       box-shadow:0 8px 22px rgba(0,0,0,0.08);
     }
     .promo-links{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
     .promo-links a{
       display:inline-block; text-decoration:none; background:#111; color:#fff;
-      padding:12px 18px; border-radius:12px; font-weight:800;
-      font-size:14px; transition:0.2s ease;
+      padding:12px 18px; border-radius:12px; font-weight:800; font-size:14px; transition:0.2s ease;
     }
     .promo-links a.red{ background:#b40000; }
     .promo-links a:hover{ transform:translateY(-1px); opacity:0.95; }
 
-    @media (max-width:900px){ .slider-grid{ grid-template-columns:1fr; } }
+    @media (max-width:900px){ .grid2{ grid-template-columns:1fr; } }
     @media (max-width:768px){
       body{ padding:16px; }
       h1{ font-size:24px; }
@@ -191,7 +207,7 @@
       .field-group, .field-group.wide{ width:100%; min-width:unset; }
       .template-card{ width:145px; }
       .template-card img{ height:190px; }
-      button{ width:100%; min-width:unset; }
+      button.action{ width:100%; min-width:unset; }
       .brand-top img{ max-height:60px; }
       .top-link-btn, .promo-links a{ width:100%; }
     }
@@ -200,6 +216,7 @@
 
 <body>
   <div class="wrap">
+
     <div class="header-box">
       <div class="brand-top">
         <img src="HazaziLogo.png" alt="Hazazi Security Logo">
@@ -225,6 +242,7 @@
     </div>
 
     <div class="controls">
+
       <div class="template-section">
         <div class="field-label">اختر التصميم | Choose Design</div>
         <div class="template-grid">
@@ -258,11 +276,17 @@
         <div class="field-group">
           <label class="field-label" for="fontSelect">اختر الخط | Choose Font</label>
           <select id="fontSelect">
-            <option value="'Cairo', Tahoma, Arial, sans-serif">Cairo</option>
-            <option value="'Tajawal', Tahoma, Arial, sans-serif">Tajawal</option>
-            <option value="'Almarai', Tahoma, Arial, sans-serif">Almarai</option>
-            <option value="'Changa', Tahoma, Arial, sans-serif">Changa</option>
-            <option value="'El Messiri', Tahoma, Arial, sans-serif">El Messiri</option>
+            <option value="'Cairo', Tahoma, Arial, sans-serif">Cairo (عصري)</option>
+            <option value="'Tajawal', Tahoma, Arial, sans-serif">Tajawal (نظيف)</option>
+            <option value="'Almarai', Tahoma, Arial, sans-serif">Almarai (واضح)</option>
+            <option value="'Changa', Tahoma, Arial, sans-serif">Changa (جريء)</option>
+            <option value="'El Messiri', Tahoma, Arial, sans-serif">El Messiri (أنيق)</option>
+            <option value="'Aref Ruqaa', Tahoma, Arial, sans-serif">Aref Ruqaa (رقعة)</option>
+            <option value="'Amiri', Tahoma, Arial, serif">Amiri (كلاسيكي)</option>
+            <option value="'Reem Kufi', Tahoma, Arial, sans-serif">Reem Kufi (كوفي)</option>
+            <option value="'Noto Naskh Arabic', Tahoma, Arial, serif">Noto Naskh Arabic (نسخ)</option>
+            <option value="'Noto Kufi Arabic', Tahoma, Arial, sans-serif">Noto Kufi Arabic (كوفي)</option>
+            <option value="'Scheherazade New', Tahoma, Arial, serif">Scheherazade New (تراثي)</option>
             <option value="'Montserrat', Arial, sans-serif">Montserrat</option>
             <option value="'Poppins', Arial, sans-serif">Poppins</option>
             <option value="'Nunito', Arial, sans-serif">Nunito</option>
@@ -272,16 +296,81 @@
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="colorSelect">اختر اللون | Choose Color</label>
+          <label class="field-label" for="colorSelect">اختر لون النص | Choose Text Color</label>
           <select id="colorSelect">
             <option value="black">أسود | Black</option>
-            <option value="red">أحمر | Red</option>
             <option value="white">أبيض | White</option>
+            <option value="red">أحمر | Red</option>
+            <option value="#B8860B">ذهبي | Gold</option>
+            <option value="#0F9D58">أخضر | Green</option>
+            <option value="#1A73E8">أزرق | Blue</option>
+            <option value="#0B1F3B">كحلي | Navy</option>
+            <option value="#6A1B9A">بنفسجي | Purple</option>
+            <option value="#666666">رمادي | Gray</option>
           </select>
         </div>
       </div>
 
-      <div class="extra-options">
+      <!-- خيارات النص الجديدة -->
+      <div class="box">
+        <div class="field-label">خيارات النص | Text Effects</div>
+
+        <div class="grid2">
+          <div>
+            <label class="field-label" for="shadowColor">لون الظل | Shadow Color</label>
+            <select id="shadowColor">
+              <option value="rgba(0,0,0,0.18)">أسود خفيف | Soft Black</option>
+              <option value="rgba(0,0,0,0.35)">أسود قوي | Strong Black</option>
+              <option value="rgba(180,0,0,0.28)">أحمر | Red</option>
+              <option value="rgba(255,255,255,0.35)">أبيض | White</option>
+              <option value="rgba(184,134,11,0.35)">ذهبي | Gold</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="field-label" for="shadowBlur">قوة/ضبابية الظل | Shadow Blur</label>
+            <select id="shadowBlur">
+              <option value="0">بدون | None</option>
+              <option value="2">خفيف | Light</option>
+              <option value="4" selected>متوسط | Medium</option>
+              <option value="7">قوي | Strong</option>
+            </select>
+          </div>
+
+          <div class="toggle">
+            <input type="checkbox" id="enableStroke" />
+            تفعيل حد خارجي | Enable Stroke
+          </div>
+
+          <div>
+            <label class="field-label" for="strokeColor">لون الحد | Stroke Color</label>
+            <select id="strokeColor">
+              <option value="rgba(0,0,0,0.45)">أسود | Black</option>
+              <option value="rgba(255,255,255,0.75)">أبيض | White</option>
+              <option value="rgba(180,0,0,0.55)">أحمر | Red</option>
+              <option value="rgba(184,134,11,0.65)">ذهبي | Gold</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="field-label" for="strokeWidth">سماكة الحد | Stroke Width</label>
+            <select id="strokeWidth">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+          <div class="toggle">
+            <input type="checkbox" id="autoStroke" checked />
+            حد تلقائي للنص الفاتح | Auto Stroke for Light Text
+          </div>
+        </div>
+      </div>
+
+      <!-- خيارات الشعار -->
+      <div class="box">
         <div class="field-label">خيارات الشعار | Logo Options</div>
 
         <div class="choice-grid">
@@ -297,7 +386,7 @@
 
           <label class="choice-card">
             <input type="radio" name="logoMode" value="upload">
-            شعار أو صورة مرفوعة | Uploaded Logo/Image
+            شعار/صورة مرفوعة | Uploaded Logo/Image
           </label>
         </div>
 
@@ -308,52 +397,48 @@
         </div>
       </div>
 
-      <div class="adjustment-section">
-        <div class="field-label">التحكم في الاسم والشعار | Adjust Name and Logo</div>
+      <!-- تحريك احترافي: سحب + أزرار -->
+      <div class="box">
+        <div class="field-label">تحريك احترافي | Pro Move (Drag + Buttons)</div>
+        <div class="hint">
+          ✅ اسحب الاسم أو الشعار مباشرة فوق البطاقة (باللمس/الماوس).<br>
+          ✅ أو استخدم الأزرار للتعديل الدقيق.
+        </div>
 
-        <div class="slider-grid">
-          <div class="slider-box">
-            <label for="nameX">مكان الاسم أفقيًا | Name Horizontal Position</label>
-            <input type="range" id="nameX" min="10" max="90" value="50" oninput="updateSliderValues()">
-            <div class="slider-value" id="nameXValue">50%</div>
-          </div>
+        <div class="move-panel">
+          <div class="move-card">
+            <div class="mode-tabs">
+              <button class="tab-btn active" id="tabName" type="button" onclick="setMoveTarget('name')">الاسم | Name</button>
+              <button class="tab-btn" id="tabLogo" type="button" onclick="setMoveTarget('logo')">الشعار | Logo</button>
+            </div>
 
-          <div class="slider-box">
-            <label for="nameY">مكان الاسم عموديًا | Name Vertical Position</label>
-            <input type="range" id="nameY" min="10" max="95" value="74" oninput="updateSliderValues()">
-            <div class="slider-value" id="nameYValue">74%</div>
-          </div>
+            <div class="dpad">
+              <div></div>
+              <button class="mini-btn gray" type="button" onclick="moveSelected(0,-1)">▲</button>
+              <div></div>
 
-          <div class="slider-box">
-            <label for="fontSizeControl">حجم الخط | Font Size</label>
-            <input type="range" id="fontSizeControl" min="24" max="100" value="62" oninput="updateSliderValues()">
-            <div class="slider-value" id="fontSizeValue">62px</div>
-          </div>
+              <button class="mini-btn gray" type="button" onclick="moveSelected(-1,0)">◀</button>
+              <button class="mini-btn" type="button" onclick="centerSelected()">◎</button>
+              <button class="mini-btn gray" type="button" onclick="moveSelected(1,0)">▶</button>
 
-          <div class="slider-box">
-            <label for="logoX">مكان الشعار أفقيًا | Logo Horizontal Position</label>
-            <input type="range" id="logoX" min="0" max="90" value="39" oninput="updateSliderValues()">
-            <div class="slider-value" id="logoXValue">39%</div>
-          </div>
+              <div></div>
+              <button class="mini-btn gray" type="button" onclick="moveSelected(0,1)">▼</button>
+              <div></div>
+            </div>
 
-          <div class="slider-box">
-            <label for="logoY">مكان الشعار عموديًا | Logo Vertical Position</label>
-            <input type="range" id="logoY" min="0" max="90" value="4" oninput="updateSliderValues()">
-            <div class="slider-value" id="logoYValue">4%</div>
-          </div>
-
-          <div class="slider-box">
-            <label for="logoWidth">حجم الشعار | Logo Size</label>
-            <input type="range" id="logoWidth" min="8" max="40" value="22" oninput="updateSliderValues()">
-            <div class="slider-value" id="logoWidthValue">22%</div>
+            <div class="size-row">
+              <button class="mini-btn red" type="button" onclick="sizeSelected(-1)">−</button>
+              <button class="mini-btn red" type="button" onclick="sizeSelected(1)">+</button>
+              <button class="mini-btn" type="button" onclick="resetSelected()">Reset</button>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="buttons">
-        <button type="button" class="btn-primary" onclick="generateCard()">إنشاء البطاقة | Generate Card</button>
-        <button type="button" class="btn-accent" onclick="downloadCard()">تحميل البطاقة | Download Card</button>
-        <button type="button" class="btn-primary" onclick="resetOptions()">إعادة تعيين | Reset</button>
+        <button type="button" class="action btn-primary" onclick="generateCard()">إنشاء البطاقة | Generate Card</button>
+        <button type="button" class="action btn-accent" onclick="downloadCard()">تحميل البطاقة | Download Card</button>
+        <button type="button" class="action btn-primary" onclick="resetAll()">إعادة تعيين | Reset All</button>
       </div>
     </div>
 
@@ -363,7 +448,7 @@
       <canvas id="cardCanvas"></canvas>
     </div>
 
-    <div class="promo-box">
+    <div class="promo-box box">
       <h3>تعرف علينا أكثر | Know More About Us</h3>
       <p>
         نصمم حلولًا أمنية واحترافية بهوية مميزة، ويسعدنا خدمتك في الأعمال الخاصة والشركات.
@@ -382,10 +467,10 @@
         </a>
       </div>
     </div>
-  </div>
-  <script>
+    <script>
     const canvas = document.getElementById("cardCanvas");
     const ctx = canvas.getContext("2d");
+
     const statusEl = document.getElementById("status");
     const nameInput = document.getElementById("nameInput");
     const fontSelect = document.getElementById("fontSelect");
@@ -393,54 +478,77 @@
     const templateCards = document.querySelectorAll(".template-card");
     const customLogoInput = document.getElementById("customLogoInput");
 
-    const nameX = document.getElementById("nameX");
-    const nameY = document.getElementById("nameY");
-    const fontSizeControl = document.getElementById("fontSizeControl");
-    const logoX = document.getElementById("logoX");
-    const logoY = document.getElementById("logoY");
-    const logoWidth = document.getElementById("logoWidth");
+    // Text effects
+    const shadowColorEl = document.getElementById("shadowColor");
+    const shadowBlurEl  = document.getElementById("shadowBlur");
+    const enableStrokeEl= document.getElementById("enableStroke");
+    const strokeColorEl = document.getElementById("strokeColor");
+    const strokeWidthEl = document.getElementById("strokeWidth");
+    const autoStrokeEl  = document.getElementById("autoStroke");
 
-    let currentImage = new Image();
+    // Move buttons tabs
+    const tabName = document.getElementById("tabName");
+    const tabLogo = document.getElementById("tabLogo");
+
     let currentTemplate = "EidHazazi1.png";
+    let currentImage = new Image();
+
+    // Logos
     let companyLogo = new Image();
     let companyLogoReady = false;
+    companyLogo.onload = () => companyLogoReady = true;
+    companyLogo.src = "HazaziLogo.png";
+
     let customLogo = null;
+
     let ready = false;
     let generated = false;
 
-    companyLogo.onload = function () { companyLogoReady = true; };
-    companyLogo.src = "HazaziLogo.png";
+    // Easy control
+    let moveTarget = "name"; // name | logo
+    const MOVE_STEP_PX = 10;
+    const NAME_SIZE_STEP = 2;
+    const LOGO_SIZE_STEP_PCT = 1;
 
-    customLogoInput.addEventListener("change", function (event) {
-      const file = event.target.files[0];
-      if (!file) { customLogo = null; return; }
+    // positions & sizes
+    let namePos = { x: 0, y: 0 };
+    let logoPos = { x: 0, y: 0 };
+    let nameFontSize = 62;
+    let logoWidthPct = 22;
 
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        const img = new Image();
-        img.onload = function () { customLogo = img; };
-        img.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
-    });
+    const DEFAULTS = {
+      nameX: 0.5, nameY: 0.74,
+      logoX: 0.39, logoY: 0.04,
+      nameFontSize: 62,
+      logoWidthPct: 22
+    };
+
+    // Drag state
+    let dragging = false;
+    let dragTarget = null; // "name" | "logo"
+    let dragOffset = { x: 0, y: 0 };
 
     function getSelectedLogoMode() {
       const selected = document.querySelector('input[name="logoMode"]:checked');
       return selected ? selected.value : "none";
     }
 
-    function updateSliderValues() {
-      document.getElementById("nameXValue").textContent = nameX.value + "%";
-      document.getElementById("nameYValue").textContent = nameY.value + "%";
-      document.getElementById("fontSizeValue").textContent = fontSizeControl.value + "px";
-      document.getElementById("logoXValue").textContent = logoX.value + "%";
-      document.getElementById("logoYValue").textContent = logoY.value + "%";
-      document.getElementById("logoWidthValue").textContent = logoWidth.value + "%";
-    }
+    customLogoInput.addEventListener("change", (event) => {
+      const file = event.target.files[0];
+      if (!file) { customLogo = null; render(); return; }
 
-    function setActiveTemplateCard(selectedElement) {
-      templateCards.forEach(card => card.classList.remove("active"));
-      selectedElement.classList.add("active");
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => { customLogo = img; render(); };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+
+    function setActiveTemplateCard(el) {
+      templateCards.forEach(c => c.classList.remove("active"));
+      el.classList.add("active");
     }
 
     function loadTemplate(src) {
@@ -449,26 +557,29 @@
       statusEl.textContent = "جاري تحميل البطاقة... | Loading card...";
 
       const img = new Image();
-      img.onload = function () {
+      img.onload = () => {
         currentImage = img;
         canvas.width = img.naturalWidth;
         canvas.height = img.naturalHeight;
-        drawBaseCard();
+
+        namePos.x = canvas.width * DEFAULTS.nameX;
+        namePos.y = canvas.height * DEFAULTS.nameY;
+        logoPos.x = canvas.width * DEFAULTS.logoX;
+        logoPos.y = canvas.height * DEFAULTS.logoY;
+
+        nameFontSize = DEFAULTS.nameFontSize;
+        logoWidthPct = DEFAULTS.logoWidthPct;
+
         ready = true;
         statusEl.textContent = "البطاقة جاهزة | Card is ready";
+        render();
       };
-      img.onerror = function () {
+      img.onerror = () => {
         ready = false;
         statusEl.textContent = "تعذر تحميل التصميم المختار | Failed to load selected template";
         alert("تعذر تحميل التصميم المختار. تأكد من اسم الصورة ووجودها في نفس مكان index.html");
       };
       img.src = src;
-    }
-
-    function drawBaseCard() {
-      if (!currentImage || !currentImage.complete) return;
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.drawImage(currentImage, 0, 0, canvas.width, canvas.height);
     }
 
     function selectTemplate(templateName, element) {
@@ -477,20 +588,140 @@
       loadTemplate(currentTemplate);
     }
     window.selectTemplate = selectTemplate;
-    window.updateSliderValues = updateSliderValues;
 
-    function drawLogoOnCard(imgObject) {
+    function setMoveTarget(target) {
+      moveTarget = target;
+      tabName.classList.toggle("active", target === "name");
+      tabLogo.classList.toggle("active", target === "logo");
+    }
+    window.setMoveTarget = setMoveTarget;
+
+    function centerSelected() {
+      if (!ready) return;
+      if (moveTarget === "name") {
+        namePos.x = canvas.width / 2;
+        namePos.y = canvas.height * DEFAULTS.nameY;
+      } else {
+        // center logo horizontally
+        const w = canvas.width * (logoWidthPct / 100);
+        logoPos.x = (canvas.width - w) / 2;
+        logoPos.y = canvas.height * DEFAULTS.logoY;
+      }
+      render(); generated = true;
+    }
+    window.centerSelected = centerSelected;
+
+    function resetSelected() {
+      if (!ready) return;
+      if (moveTarget === "name") {
+        namePos.x = canvas.width * DEFAULTS.nameX;
+        namePos.y = canvas.height * DEFAULTS.nameY;
+        nameFontSize = DEFAULTS.nameFontSize;
+      } else {
+        logoPos.x = canvas.width * DEFAULTS.logoX;
+        logoPos.y = canvas.height * DEFAULTS.logoY;
+        logoWidthPct = DEFAULTS.logoWidthPct;
+      }
+      render(); generated = true;
+    }
+    window.resetSelected = resetSelected;
+
+    function moveSelected(dx, dy) {
+      if (!ready) return;
+      if (moveTarget === "name") {
+        namePos.x += dx * MOVE_STEP_PX;
+        namePos.y += dy * MOVE_STEP_PX;
+      } else {
+        logoPos.x += dx * MOVE_STEP_PX;
+        logoPos.y += dy * MOVE_STEP_PX;
+      }
+      render(); generated = true;
+    }
+    window.moveSelected = moveSelected;
+
+    function sizeSelected(dir) {
+      if (!ready) return;
+      if (moveTarget === "name") {
+        nameFontSize = Math.max(18, Math.min(160, nameFontSize + dir * NAME_SIZE_STEP));
+      } else {
+        logoWidthPct = Math.max(5, Math.min(70, logoWidthPct + dir * LOGO_SIZE_STEP_PCT));
+      }
+      render(); generated = true;
+    }
+    window.sizeSelected = sizeSelected;
+
+    function getActiveLogoImage() {
+      const mode = getSelectedLogoMode();
+      if (mode === "hazazi" && companyLogoReady) return companyLogo;
+      if (mode === "upload" && customLogo) return customLogo;
+      return null;
+    }
+
+    function drawLogo(imgObject) {
       if (!imgObject) return;
-
-      const widthPercent = parseFloat(logoWidth.value) / 100;
-      const targetWidth = canvas.width * widthPercent;
+      const targetW = canvas.width * (logoWidthPct / 100);
       const ratio = imgObject.naturalWidth / imgObject.naturalHeight;
-      const targetHeight = targetWidth / ratio;
+      const targetH = targetW / ratio;
+      ctx.drawImage(imgObject, logoPos.x, logoPos.y, targetW, targetH);
+    }
 
-      const x = canvas.width * (parseFloat(logoX.value) / 100);
-      const y = canvas.height * (parseFloat(logoY.value) / 100);
+    function isLightColor(colorValue) {
+      // simple set (can be expanded)
+      const light = new Set(["white", "#B8860B"]);
+      return light.has(colorValue);
+    }
 
-      ctx.drawImage(imgObject, x, y, targetWidth, targetHeight);
+    async function render() {
+      if (!ready || !currentImage.complete) return;
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(currentImage, 0, 0, canvas.width, canvas.height);
+
+      // logo
+      const logoImg = getActiveLogoImage();
+      if (logoImg) drawLogo(logoImg);
+
+      const name = nameInput.value.trim();
+      if (!name) return;
+
+      // wait fonts
+      if (document.fonts && document.fonts.ready) {
+        try { await document.fonts.ready; } catch(e) {}
+      }
+
+      const selectedFont = fontSelect.value;
+      const selectedColor = colorSelect.value;
+
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+
+      // shadow
+      const blur = parseInt(shadowBlurEl.value, 10);
+      ctx.shadowColor = shadowColorEl.value;
+      ctx.shadowBlur = blur;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = blur > 0 ? 2 : 0;
+
+      ctx.font = "800 " + nameFontSize + "px " + selectedFont;
+
+      // stroke rules
+      const forceStroke = enableStrokeEl.checked;
+      const autoStroke = autoStrokeEl.checked && isLightColor(selectedColor);
+
+      if (forceStroke || autoStroke) {
+        ctx.lineWidth = parseInt(strokeWidthEl.value, 10);
+        ctx.strokeStyle = strokeColorEl.value;
+        ctx.strokeText(name, namePos.x, namePos.y);
+      }
+
+      ctx.fillStyle = selectedColor;
+      ctx.fillText(name, namePos.x, namePos.y);
+
+      // reset shadow so it won't affect other drawings later
+      ctx.shadowColor = "transparent";
+      ctx.shadowBlur = 0;
+      ctx.shadowOffsetX = 0;
+      ctx.shadowOffsetY = 0;
     }
 
     async function generateCard() {
@@ -498,47 +729,12 @@
         alert("التصميم لم يجهز بعد | Template is still loading");
         return;
       }
-
       const name = nameInput.value.trim();
       if (!name) {
         alert("اكتب اسمك أولاً | Please enter your name first");
         return;
       }
-
-      if (document.fonts && document.fonts.ready) {
-        try { await document.fonts.ready; } catch (e) {}
-      }
-
-      drawBaseCard();
-
-      const logoMode = getSelectedLogoMode();
-      if (logoMode === "hazazi" && companyLogoReady) drawLogoOnCard(companyLogo);
-      if (logoMode === "upload" && customLogo) drawLogoOnCard(customLogo);
-
-      const selectedFont = fontSelect.value;
-      const selectedColor = colorSelect.value;
-      const finalFontSize = parseInt(fontSizeControl.value, 10);
-
-      ctx.fillStyle = selectedColor;
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.shadowColor = "rgba(0,0,0,0.18)";
-      ctx.shadowBlur = 3;
-      ctx.shadowOffsetX = 0;
-      ctx.shadowOffsetY = 2;
-
-      ctx.font = "800 " + finalFontSize + "px " + selectedFont;
-
-      const x = canvas.width * (parseFloat(nameX.value) / 100);
-      const y = canvas.height * (parseFloat(nameY.value) / 100);
-
-      if (selectedColor === "white") {
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = "rgba(0,0,0,0.35)";
-        ctx.strokeText(name, x, y);
-      }
-
-      ctx.fillText(name, x, y);
+      await render();
       generated = true;
       statusEl.textContent = "تم إنشاء البطاقة بنجاح | Card generated successfully";
     }
@@ -553,7 +749,6 @@
         alert("أنشئ البطاقة أولاً | Please generate the card first");
         return;
       }
-
       const link = document.createElement("a");
       link.download = "eid-card.png";
       link.href = canvas.toDataURL("image/png");
@@ -568,20 +763,11 @@
     }
 
     async function shareCardOnWhatsApp() {
-      if (!ready) {
-        alert("التصميم لم يجهز بعد | Template is still loading");
-        return;
-      }
-      if (!generated) {
-        alert("أنشئ البطاقة أولاً ثم شاركها | Please generate the card first, then share it");
-        return;
-      }
+      if (!ready) { alert("التصميم لم يجهز بعد | Template is still loading"); return; }
+      if (!generated) { alert("أنشئ البطاقة أولاً ثم شاركها | Please generate the card first, then share it"); return; }
 
       const blob = await canvasToBlob();
-      if (!blob) {
-        alert("تعذر تجهيز البطاقة للمشاركة | Failed to prepare the card for sharing");
-        return;
-      }
+      if (!blob) { alert("تعذر تجهيز البطاقة للمشاركة | Failed to prepare the card for sharing"); return; }
 
       const file = new File([blob], "eid-card.png", { type: "image/png" });
 
@@ -596,8 +782,8 @@
           downloadCard();
           alert("جهازك لا يدعم مشاركة الصورة مباشرة. تم تنزيل البطاقة، ويمكنك إرسالها عبر واتساب يدويًا.");
         }
-      } catch (error) {
-        if (error && error.name !== "AbortError") {
+      } catch (err) {
+        if (err && err.name !== "AbortError") {
           downloadCard();
           alert("تعذر فتح المشاركة المباشرة. تم تنزيل البطاقة بدلًا من ذلك.");
         }
@@ -605,36 +791,164 @@
     }
     window.shareCardOnWhatsApp = shareCardOnWhatsApp;
 
-    function resetOptions() {
+    function resetAll() {
       nameInput.value = "";
       fontSelect.selectedIndex = 0;
       colorSelect.value = "black";
+
+      shadowColorEl.selectedIndex = 0;
+      shadowBlurEl.value = "4";
+      enableStrokeEl.checked = false;
+      strokeColorEl.selectedIndex = 0;
+      strokeWidthEl.value = "2";
+      autoStrokeEl.checked = true;
+
       customLogoInput.value = "";
       customLogo = null;
 
       document.querySelector('input[name="logoMode"][value="none"]').checked = true;
 
-      nameX.value = 50;
-      nameY.value = 74;
-      fontSizeControl.value = 62;
-      logoX.value = 39;
-      logoY.value = 4;
-      logoWidth.value = 22;
+      nameFontSize = DEFAULTS.nameFontSize;
+      logoWidthPct = DEFAULTS.logoWidthPct;
 
-      updateSliderValues();
+      if (ready) {
+        namePos.x = canvas.width * DEFAULTS.nameX;
+        namePos.y = canvas.height * DEFAULTS.nameY;
+        logoPos.x = canvas.width * DEFAULTS.logoX;
+        logoPos.y = canvas.height * DEFAULTS.logoY;
+      }
+
+      setMoveTarget("name");
 
       const firstCard = document.querySelector('.template-card[data-template="EidHazazi1.png"]');
-      setActiveTemplateCard(firstCard);
+      if (firstCard) setActiveTemplateCard(firstCard);
       currentTemplate = "EidHazazi1.png";
       loadTemplate(currentTemplate);
 
-      statusEl.textContent = "تمت إعادة التعيين | Reset completed";
       generated = false;
+      statusEl.textContent = "تمت إعادة التعيين | Reset completed";
     }
-    window.resetOptions = resetOptions;
+    window.resetAll = resetAll;
 
-    updateSliderValues();
+    // --- Drag & Drop (احترافي) ---
+    function getPointerPos(evt) {
+      const rect = canvas.getBoundingClientRect();
+      const clientX = evt.touches ? evt.touches[0].clientX : evt.clientX;
+      const clientY = evt.touches ? evt.touches[0].clientY : evt.clientY;
+
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+
+      return {
+        x: (clientX - rect.left) * scaleX,
+        y: (clientY - rect.top) * scaleY
+      };
+    }
+
+    function nameHitBox() {
+      const name = nameInput.value.trim();
+      if (!name) return null;
+
+      ctx.font = "800 " + nameFontSize + "px " + fontSelect.value;
+      const w = ctx.measureText(name).width;
+      const h = nameFontSize * 1.1;
+
+      return { x: namePos.x - w/2, y: namePos.y - h/2, w, h };
+    }
+
+    function logoHitBox(img) {
+      if (!img) return null;
+      const w = canvas.width * (logoWidthPct / 100);
+      const ratio = img.naturalWidth / img.naturalHeight;
+      const h = w / ratio;
+      return { x: logoPos.x, y: logoPos.y, w, h };
+    }
+
+    function inBox(p, b) {
+      return p.x >= b.x && p.x <= b.x + b.w && p.y >= b.y && p.y <= b.y + b.h;
+    }
+
+    function pointerDown(evt) {
+      if (!ready) return;
+      const p = getPointerPos(evt);
+
+      const activeLogo = getActiveLogoImage();
+      const lb = activeLogo ? logoHitBox(activeLogo) : null;
+      const nb = nameHitBox();
+
+      // أعط أولوية للشعار إذا ضغط عليه
+      if (lb && inBox(p, lb)) {
+        dragging = true;
+        dragTarget = "logo";
+        dragOffset.x = p.x - logoPos.x;
+        dragOffset.y = p.y - logoPos.y;
+        setMoveTarget("logo");
+        evt.preventDefault();
+        return;
+      }
+
+      if (nb && inBox(p, nb)) {
+        dragging = true;
+        dragTarget = "name";
+        dragOffset.x = p.x - namePos.x;
+        dragOffset.y = p.y - namePos.y;
+        setMoveTarget("name");
+        evt.preventDefault();
+        return;
+      }
+
+      dragging = false;
+      dragTarget = null;
+    }
+
+    function pointerMove(evt) {
+      if (!dragging || !dragTarget) return;
+      const p = getPointerPos(evt);
+
+      if (dragTarget === "name") {
+        namePos.x = p.x - dragOffset.x;
+        namePos.y = p.y - dragOffset.y;
+      } else {
+        logoPos.x = p.x - dragOffset.x;
+        logoPos.y = p.y - dragOffset.y;
+      }
+
+      render();
+      generated = true;
+      evt.preventDefault();
+    }
+
+    function pointerUp() {
+      dragging = false;
+      dragTarget = null;
+    }
+
+    canvas.addEventListener("mousedown", pointerDown);
+    window.addEventListener("mousemove", pointerMove);
+    window.addEventListener("mouseup", pointerUp);
+
+    canvas.addEventListener("touchstart", pointerDown, { passive:false });
+    window.addEventListener("touchmove", pointerMove, { passive:false });
+    window.addEventListener("touchend", pointerUp);
+
+    // Live updates
+    nameInput.addEventListener("input", () => { render(); generated = true; });
+    fontSelect.addEventListener("change", () => { render(); generated = true; });
+    colorSelect.addEventListener("change", () => { render(); generated = true; });
+
+    shadowColorEl.addEventListener("change", () => { render(); generated = true; });
+    shadowBlurEl.addEventListener("change", () => { render(); generated = true; });
+    enableStrokeEl.addEventListener("change", () => { render(); generated = true; });
+    strokeColorEl.addEventListener("change", () => { render(); generated = true; });
+    strokeWidthEl.addEventListener("change", () => { render(); generated = true; });
+    autoStrokeEl.addEventListener("change", () => { render(); generated = true; });
+
+    document.querySelectorAll('input[name="logoMode"]').forEach(r => r.addEventListener("change", () => { render(); generated = true; }));
+
+    // start
     loadTemplate(currentTemplate);
   </script>
 </body>
 </html>
+
+  </div>
